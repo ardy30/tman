@@ -1,0 +1,794 @@
+# Microsoft eMbedded Visual Tools Project File - Name="tmancfg_ppc2002" - Package Owner=<4>
+# Microsoft eMbedded Visual Tools Generated Build File, Format Version 6.02
+# ** DO NOT EDIT **
+
+# TARGTYPE "Win32 (WCE x86) Application" 0x8301
+# TARGTYPE "Win32 (WCE ARM) Application" 0x8501
+
+CFG=tmancfg_ppc2002 - Win32 (WCE ARM) Debug
+!MESSAGE This is not a valid makefile. To build this project using NMAKE,
+!MESSAGE use the Export Makefile command and run
+!MESSAGE 
+!MESSAGE NMAKE /f "tmancfg_ppc2002.vcn".
+!MESSAGE 
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "tmancfg_ppc2002.vcn" CFG="tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "tmancfg_ppc2002 - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "tmancfg_ppc2002 - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Application")
+!MESSAGE "tmancfg_ppc2002 - Win32 (WCE x86) Release" (based on "Win32 (WCE x86) Application")
+!MESSAGE "tmancfg_ppc2002 - Win32 (WCE x86) Debug" (based on "Win32 (WCE x86) Application")
+!MESSAGE 
+
+# Begin Project
+# PROP AllowPerConfigDependencies 0
+# PROP Scc_ProjName ""
+# PROP Scc_LocalPath ""
+# PROP ATL_Project 2
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ARMRel"
+# PROP BASE Intermediate_Dir "ARMRel"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ARMRel"
+# PROP Intermediate_Dir "ARMRel"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /GX- /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_AFXDLL" /Yu"stdafx.h" /Oxs /M$(CECrtMT)  /c
+# ADD CPP /nologo /W3 /GX- /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_AFXDLL" /Yu"stdafx.h" /Oxs /M$(CECrtMT)  /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "ARMDbg"
+# PROP BASE Intermediate_Dir "ARMDbg"
+# PROP BASE CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "ARMDbg"
+# PROP Intermediate_Dir "ARMDbg"
+# PROP CPU_ID "{D6518FFC-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /d "_AFXDLL" /r
+CPP=clarm.exe
+# ADD BASE CPP /nologo /W3 /GX- /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_AFXDLL" /Yu"stdafx.h" /M$(CECrtMTDebug)  /c
+# ADD CPP /nologo /W3 /GX- /Zi /Od /D "DEBUG" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_AFXDLL" /Yu"stdafx.h" /M$(CECrtMTDebug)  /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "X86Rel"
+# PROP BASE Intermediate_Dir "X86Rel"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "X86Rel"
+# PROP Intermediate_Dir "X86Rel"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /GX- /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /Yu"stdafx.h" /Gs8192 /GF /Oxs  /c
+# ADD CPP /nologo /W3 /GX- /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /Yu"stdafx.h" /Gs8192 /GF /Oxs  /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "X86Dbg"
+# PROP BASE Intermediate_Dir "X86Dbg"
+# PROP BASE CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP BASE Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 2
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "X86Dbg"
+# PROP Intermediate_Dir "X86Dbg"
+# PROP CPU_ID "{D6518FF3-710F-11D3-99F2-00105A0DF099}"
+# PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
+# PROP Target_Dir ""
+RSC=rc.exe
+# ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+# ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /d "_AFXDLL" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /GX- /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /Yu"stdafx.h" /Gs8192 /GF  /c
+# ADD CPP /nologo /W3 /GX- /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_WIN32_WCE_CEPC" /D "_AFXDLL" /Yu"stdafx.h" /Gs8192 /GF  /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"wWinMainCRTStartup" /debug /subsystem:$(CESubsystem) /MACHINE:IX86
+
+!ENDIF 
+
+# Begin Target
+
+# Name "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+# Name "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+# Name "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+# Name "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+# Begin Group "Source Files"
+
+# PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\Caption.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_CAPTI=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CAPTI=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_CAPTI=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_CAPTI=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\CeDialog.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_CEDIA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CEDIA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_CEDIA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_CEDIA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\Config.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_CONFI=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_CONFI=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_CONFI=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_CONFI=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\StdAfx.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_STDAF=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_STDAF=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManAboutPg.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_TMANA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_TMANA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_TMANA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_TMANA=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfg.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_TMANC=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_TMANC=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_TMANC=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_TMANC=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tmancfg.rc"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfgPg.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_TMANCF=\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_TMANCF=\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_TMANCF=\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_TMANCF=\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManSheet.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_TMANS=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_TMANS=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_TMANS=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_TMANS=\
+	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\Config.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\UIHelper.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_UIHEL=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_UIHEL=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_UIHEL=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_UIHEL=\
+	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
+	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# End Group
+# Begin Group "Header Files"
+
+# PROP Default_Filter "h;hpp;hxx;hm;inl"
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\Caption.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\CeDialog.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\Config.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\newres.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\resource.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\shguim.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\StdAfx.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManAboutPg.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfg.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfgPg.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManSheet.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\UIHelper.h"
+# End Source File
+# End Group
+# Begin Group "Resource Files"
+
+# PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\res\tmancfg.ico"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\tmancfg\res\tmancfg.rc2"
+# End Source File
+# End Group
+# Begin Group "share"
+
+# PROP Default_Filter ""
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\share\defs.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\share\helpers.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_HELPE=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_HELPE=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_HELPE=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_HELPE=\
+	"..\..\..\..\devel\pda\tman\share\defs.h"\
+	"..\..\..\..\devel\pda\tman\share\helpers.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\share\helpers.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\share\regs.cpp"
+
+!IF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Release"
+
+DEP_CPP_REGS_=\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE ARM) Debug"
+
+DEP_CPP_REGS_=\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Release"
+
+DEP_CPP_REGS_=\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	
+
+!ELSEIF  "$(CFG)" == "tmancfg_ppc2002 - Win32 (WCE x86) Debug"
+
+DEP_CPP_REGS_=\
+	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="$(PDA_LOCAL)\tman\share\regs.h"
+# End Source File
+# End Group
+# End Target
+# End Project

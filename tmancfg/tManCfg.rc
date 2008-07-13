@@ -1,0 +1,523 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\tmancfg.rc2""  // non-Microsoft eMbedded Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""wceres.rc""         // WCE-specific components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GRAB_KEY DIALOG DISCARDABLE  0, 0, 120, 38
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Grab a Key"
+FONT 8, "Tahoma"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,40,21,40,12
+    LTEXT           "Please, press any HW key to grab",IDC_C_GRAB_HW_KEY,4,4,
+                    112,12
+END
+
+IDD_TMANCFG_DIALOG DIALOG DISCARDABLE  0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Config"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "General",IDC_GENERAL_LBL,4,4,152,10
+    CONTROL         "Run tMan on startup",IDC_RUN_ON_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,16,148,10
+    LTEXT           "Close Button",IDC_BEHAVIOR_LBL,4,58,152,10
+    LTEXT           "On tap",IDC_C_ON_TAP,8,72,74,10
+    COMBOBOX        IDC_TAP_ACTION,84,72,72,43,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "On tap-and-hold",IDC_C_ONTAPNHOLD,8,88,74,10
+    COMBOBOX        IDC_TAP_AND_HOLD_ACTION,84,88,72,46,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "On gesture",IDC_C_ON_GESTURE,8,104,74,10
+    COMBOBOX        IDC_GESTURE_ACTION,84,104,72,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Exceptions...",IDC_EXCEPTIONS,84,120,72,13
+END
+
+IDD_TMANCFG_ABOUT DIALOGEX 0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "About"
+FONT 8, "Tahoma"
+BEGIN
+    ICON            IDI_TMAN,IDC_STATIC,8,8,20,20
+    LTEXT           "tMan",IDC_STATIC,36,8,116,10
+    LTEXT           "Version 0.9.10",IDC_STATIC,36,18,116,10
+    LTEXT           "Copyright (c) 2005 - 2008",IDC_STATIC,36,36,115,10
+    LTEXT           "David Andrš",IDC_STATIC,36,46,115,10
+    RTEXT           "http://pda.jasnapaka.com/tman/",IDC_HOMEPAGE_LINK,4,151,
+                    152,10,SS_NOTIFY
+END
+
+IDD_TMANCFG_TASKLIST DIALOG DISCARDABLE  0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Task List"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Items",IDC_ITEMS_LBL,4,4,152,10
+    CONTROL         "List1",IDC_TASKLIST_ITEMS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,4,16,152,98
+    PUSHBUTTON      "Ignore List...",IDC_IGNORE_LIST,96,118,60,13
+    CONTROL         "Compact mode",IDC_COMPACT_MODE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,119,92,10
+END
+
+IDD_IGNORE_LIST DIALOG DISCARDABLE  0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Ignore List"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "These applications will not be shown in the task list:",
+                    IDC_C_IGNORELIST,4,18,152,18
+    CONTROL         "List1",IDC_APP_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,4,40,152,120
+END
+
+IDD_EXCEPTIONS DIALOG DISCARDABLE  0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Exceptions"
+FONT 8, "Tahoma"
+BEGIN
+    CONTROL         "List1",IDC_PROGRAMS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,4,18,152,110
+    LTEXT           "On tap",IDC_C_ON_TAP,4,133,80,10
+    COMBOBOX        IDC_TAP_ACTION,84,132,72,43,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "On gesture",IDC_C_ON_GESTURE,4,149,80,10
+    COMBOBOX        IDC_GESTURE_ACTION,84,149,72,40,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BROWSE DIALOG DISCARDABLE  0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Browse"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_PATH,4,18,152,12,ES_AUTOHSCROLL | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    CONTROL         "Tree1",IDC_DIRS,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | 
+                    WS_BORDER | WS_TABSTOP,4,34,152,128
+END
+
+IDD_TMANCFG_BUTTONS DIALOG DISCARDABLE  0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "Buttons"
+FONT 8, "Tahoma"
+BEGIN
+    LTEXT           "Task List Accelerator",IDC_TASKLIST_LBL,4,4,152,10
+    EDITTEXT        IDC_HWKEY,8,16,68,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "Grab",IDC_GRAB,80,16,36,12
+    PUSHBUTTON      "Clear",IDC_CLEAR,120,16,36,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_GRAB_KEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 116
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 33
+    END
+
+    IDD_TMANCFG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 157
+        VERTGUIDE, 10
+        VERTGUIDE, 85
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_TMANCFG_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 156
+        VERTGUIDE, 36
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_TMANCFG_TASKLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 157
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 161
+    END
+
+    IDD_IGNORE_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 157
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_EXCEPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 157
+        VERTGUIDE, 85
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_BROWSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+    END
+
+    IDD_TMANCFG_BUTTONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 157
+        VERTGUIDE, 10
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 161
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menubar
+//
+
+IDR_BROWSE MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Cancel",                      IDCANCEL
+END
+
+IDR_REMOVE MENU DISCARDABLE 
+BEGIN
+    POPUP "a"
+    BEGIN
+        MENUITEM "&Remove",                     ID_REMOVE
+    END
+END
+
+IDR_EXCEPTIONS MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Add",                         ID_ADD
+    MENUITEM "Close",                       IDOK
+END
+
+IDR_IGNORE_LIST MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Add",                         ID_ADD
+    MENUITEM "Close",                       IDOK
+END
+
+IDR_MAIN MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Close",                       IDOK
+    MENUITEM "About",                       ID_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_BROWSE SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_BROWSE, 1,
+    I_IMAGENONE, IDCANCEL, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_CANCEL, 
+    0, NOMENU,
+END
+
+IDR_REMOVE SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_REMOVE, 1,
+    I_IMAGENONE, ID_A, TBSTATE_ENABLED, TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE, 
+    IDS_CAP_A, 0, 0,
+END
+
+IDR_EXCEPTIONS SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_EXCEPTIONS, 2,
+    I_IMAGENONE, ID_ADD, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_ADD, 0, 
+    NOMENU,
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_CLOSE, 0, 
+    NOMENU,
+END
+
+IDR_IGNORE_LIST SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_IGNORE_LIST, 2,
+    I_IMAGENONE, ID_ADD, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_ADD, 0, 
+    NOMENU,
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_CLOSE, 0, 
+    NOMENU,
+END
+
+IDR_MAIN SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_MAIN, 2,
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED, TBSTYLE_GROUP, IDS_CAP_CLOSE, 0, 
+    NOMENU,
+    I_IMAGENONE, ID_ABOUT, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_ABOUT, 
+    0, NOMENU,
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DIRS_HI             BITMAP  DISCARDABLE     "res\\dirs_hi.bmp"
+IDB_DIRS                BITMAP  DISCARDABLE     "res\\dirs.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\tmancfg.ico"
+IDI_TMAN                ICON    DISCARDABLE     "..\\res\\main.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// CEUX
+//
+
+HI_RES_AWARE CEUX DISCARDABLE 
+BEGIN
+    0x0001
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,10,0
+ PRODUCTVERSION 0,9,10,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "David Andrs\0"
+            VALUE "FileDescription", "tMan Config\0"
+            VALUE "FileVersion", "0, 9, 10, 0\0"
+            VALUE "InternalName", "tmancfg\0"
+            VALUE "LegalCopyright", "Copyright © 2005 - 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "tmancfg.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "tMan Config\0"
+            VALUE "ProductVersion", "0, 9, 10, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_CANCEL          "Cancel"
+    IDS_CAP_NEWFOLDER       "New Folder"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_OPTIONS             "Options"
+    IDS_TMAN_CONFIG         "tMan"
+    IDS_CLOSE               "Close"
+    IDS_MINIMIZE            "Minimize"
+    IDS_SHOW_MENU           "Show menu"
+    IDS_NONE                "<None>"
+    IDS_BUTTON1             "Button 1"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_BUTTON2             "Button 2"
+    IDS_BUTTON3             "Button 3"
+    IDS_BUTTON4             "Button 4"
+    IDS_SPEED               "Speed"
+    IDS_RECORD              "Record"
+    IDS_LANDSCAPE_RIGHT     "Landscape right"
+    IDS_LANDSCAPE_LEFT      "Landscape left"
+    IDS_SOFT_RESET          "Soft reset"
+    IDS_DISPLAY_OFF         "Display off"
+    IDS_POWER_OFF           "Power off"
+    IDS_TASK_OPERATIONS     "Task operations"
+    IDS_SELECT_PROGRAM      "Select a Program"
+    IDS_MYDEVICE            "My device"
+    IDS_NOT_FILE            "Selected item is not a file."
+    IDS_LOCATION_NOT_DIR    "The selected location is not a folder."
+    IDS_DIRECTORY_NOT_CREATED "Directory was not created."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_IGNORE_LIST         "Ignore List"
+    IDS_EXCEPTIONS          "Exceptions"
+    IDS_DESKTOP             "Desktop"
+    IDS_WIFI                "Wifi On/Off"
+    IDS_BLUETOOTH           "Bluetooth On/Off"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_CAP_A               "a"
+    IDS_CAP_ADD             "Add"
+    IDS_CAP_CLOSE           "Close"
+    IDS_CAP_ABOUT           "About"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\tmancfg.rc2"  // non-Microsoft eMbedded Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "wceres.rc"         // WCE-specific components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,192 @@
+//Microsoft eMbedded Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "newres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN                ICON    DISCARDABLE     "res\\main.ico"
+IDI_CLOSE               ICON    DISCARDABLE     "res\\close.ico"
+IDI_SWRESET             ICON    DISCARDABLE     "res\\swreset.ico"
+IDI_SCREENOFF           ICON    DISCARDABLE     "res\\screenoff.ico"
+IDI_POWEROFF            ICON    DISCARDABLE     "res\\poweroff.ico"
+IDI_ROT_LEFT            ICON    DISCARDABLE     "res\\rotleft.ico"
+IDI_ROT_RIGHT           ICON    DISCARDABLE     "res\\rotright.ico"
+IDI_SETTINGS            ICON    DISCARDABLE     "res\\tmancfg.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// CEUX
+//
+
+HI_RES_AWARE CEUX DISCARDABLE 
+BEGIN
+    0x0001
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,9,10,0
+ PRODUCTVERSION 0,9,10,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040504b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "David Andrs\0"
+            VALUE "FileDescription", "tMan\0"
+            VALUE "FileVersion", "0, 9, 10, 0\0"
+            VALUE "InternalName", "tMan\0"
+            VALUE "LegalCopyright", "Copyright © 2005 - 2008\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "tman.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "tMan\0"
+            VALUE "ProductVersion", "0, 9, 10, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x405, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""newres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SOFT_RESET          "Are you sure to soft-reset the device?"
+    IDS_TMAN                "tMan"
+    IDS_KILL_FORCLY         "'%s' does not respond.\nKill forcibly?"
+    IDS_MINIMIZE            "&Minimize"
+    IDS_CLOSE_BKGND_TASKS   "Close &Background Tasks"
+    IDS_CLOSE_ALL_TASKS     "Close &All Tasks"
+    IDS_DISPLAY_OFF         "Display O&ff"
+    IDS_SOFTWARE_RESET      "Software &Reset"
+    IDS_LANDSCAPE_LEFT      "&Landscape Left"
+    IDS_LANDSCAPE_RIGHT     "La&ndscape Right"
+    IDS_POWER_OFF           "Po&wer Off"
+    IDS_SETTINGS            "&Settings..."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EXIT                "E&xit"
+    IDS_DESKTOP             "Desktop"
+    IDS_WIFI_ON             "WiFi On"
+    IDS_WIFI_OFF            "WiFi Off"
+    IDS_BLUETOOTH_ON        "Bluetooth On"
+    IDS_BLUETOOTH_OFF       "Bluetooth Off"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_BLUETOOTH_ON        ICON    DISCARDABLE     "res\\bth-on.ico"
+IDI_BLUETOOTH_OFF       ICON    DISCARDABLE     "res\\bth-off.ico"
+IDI_WIFI_OFF            ICON    DISCARDABLE     "res\\wifi_off.ico"
+IDI_WIFI_ON             ICON    DISCARDABLE     "res\\wifi_on.ico"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
