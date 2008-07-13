@@ -1,0 +1,21 @@
+#summary Information related to localizations.
+#labels Featured
+
+=Localized Versions=
+
+See [http://code.google.com/p/tman/downloads/list Downloads] section for localized versions of tMan.
+
+If you miss tMan in you native language, look below how to localize it.
+
+=Localization Guide=
+
+This mini-guide helps you to localize tMan.
+
+  # Download english.zip to your desktop PC and unzip it.
+  # Change the name of this file to the name of the language which you will translate into.
+  # Open the file in your favorite editor (for example Notepad).
+  # Translate every line (do not change the numbers).
+  # Save this file as Unicode text, not UTF-8 (Notepad from Windows 2000 and later has this ability).
+  # Send the translated file to me.
+   * It is important to send the file as an *attachment* to avoid mail delivery problems.
+   * Also it is useful to fill in the Subject field with something meaningful - good subject is for example *Czech localization for tMan <version>*.
