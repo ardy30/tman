@@ -11,7 +11,7 @@ If you miss tMan in you native language, look below how to localize it.
 
 This mini-guide helps you to localize tMan.
 
-  # Download english.zip to your desktop PC and unzip it.
+  # Download [http://tman.googlecode.com/svn/trunk/lang/english.lng english.lng] file to your desktop PC.
   # Change the name of this file to the name of the language which you will translate into.
   # Open the file in your favorite editor (for example Notepad).
   # Translate every line (do not change the numbers).
