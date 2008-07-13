@@ -11,7 +11,8 @@ Create the following keys in the registry (`HKCU\Software\DaProfik\tMan`):
    * `ClrMenuFg [DWORD]`: color of the task list text.
    * `ClrMenuHiBg [DWORD]`: color of the hilight bar background of the task list.
    * `ClrMenuHiFg [DWORD]`: color of the hilight bar text of the task list.
-   Color format is the following: 0xBBGGRR (hex). Thus, if you want a blue text, insert 0xFF0000 (hex) for `ClrMenuFg`.
+
+Color format is the following: 0xBBGGRR (hex). Thus, if you want a blue text, insert 0xFF0000 (hex) for `ClrMenuFg`.
 
 *How do I disable the soft-reset confirmation dialog?*
 
