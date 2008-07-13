@@ -1,4 +1,5 @@
 #summary System requirements for tMan
+#labels Featured
 
 =System Requirements=
 
