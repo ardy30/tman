@@ -22,7 +22,8 @@
 #include "tManCfg.h"
 #include "tManSheet.h"
 #include "../share/Config.h"
-#include "AboutDlg.h"
+#include "AboutPg.h"
+#include "LicensePg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -91,7 +92,13 @@ BOOL CtManSheet::OnInitDialog() {
 }
 
 void CtManSheet::OnAbout() {
-	CAboutDlg dlg;
-	dlg.SetMenu(IDR_BROWSE);
-	dlg.DoModal();
+	CAboutPg pgAbout;
+	CLicensePg pgLicense;
+	
+	CCePropertySheet sheet(IDS_ABOUT);
+	sheet.AddPage(&pgAbout);
+	sheet.AddPage(&pgLicense);
+	
+	sheet.SetMenu(IDR_DONE);
+	sheet.DoModal();
 }

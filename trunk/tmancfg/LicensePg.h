@@ -1,5 +1,5 @@
 /**
- *  AboutDlg.h
+ *  LicensePg.h
  *
  *  Copyright (C) 2008  David Andrs <pda@jasnapaka.com>
  *
@@ -18,40 +18,36 @@
  *
  */
 
-#if !defined(AFX_TMANABOUTPG_H__09295F7D_AC63_4C8C_B9EC_82EE35D48DB1__INCLUDED_)
-#define AFX_TMANABOUTPG_H__09295F7D_AC63_4C8C_B9EC_82EE35D48DB1__INCLUDED_
+#if !defined(_TMAN_LICENSEPG_H_)
+#define _TMAN_LICENSEPG_H_
 
 #if _MSC_VER > 1000
 #pragma once
 #endif // _MSC_VER > 1000
-// tManAboutPg.h : header file
-//
 
-#include "LinkCtrl.h"
-#include "CeDialog.h"
+#include "CePropertyPage.h"
 
 /////////////////////////////////////////////////////////////////////////////
-// CAboutDlg dialog
+// CLicensePg dialog
 
-class CAboutDlg : public CCeDialog
-{
-//	DECLARE_DYNCREATE(CAboutDlg)
+class CLicensePg : public CCePropertyPage {
+	DECLARE_DYNCREATE(CLicensePg)
 
 // Construction
 public:
-	CAboutDlg();
-	~CAboutDlg();
+	CLicensePg();
+	~CLicensePg();
 
 // Dialog Data
-	//{{AFX_DATA(CAboutDlg)
-	enum { IDD = IDD_TMANCFG_ABOUT };
-	CLinkCtrl	m_ctlHomepageLink;
+	//{{AFX_DATA(CLicensePg)
+	enum { IDD = IDD_LICENSE };
 	//}}AFX_DATA
+	CEdit m_ctlLicense;
 
 
 // Overrides
 	// ClassWizard generate virtual function overrides
-	//{{AFX_VIRTUAL(CAboutDlg)
+	//{{AFX_VIRTUAL(CLicensePg)
 	public:
 	virtual void OnOK();
 	protected:
@@ -61,9 +57,9 @@ public:
 // Implementation
 protected:
 	// Generated message map functions
-	//{{AFX_MSG(CAboutDlg)
+	//{{AFX_MSG(CLicensePg)
 	virtual BOOL OnInitDialog();
-	afx_msg void OnHomepageLink();
+	afx_msg void OnSize(UINT nType, int cx, int cy);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 
@@ -72,4 +68,4 @@ protected:
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#endif // !defined(AFX_tManAboutPg_H__09295F7D_AC63_4C8C_B9EC_82EE35D48DB1__INCLUDED_)
+#endif // !defined(_TMAN_LICENSEPG_H_)

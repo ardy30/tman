@@ -89,7 +89,7 @@ BEGIN
                     112,12
 END
 
-IDD_TMANCFG_DIALOG DIALOG DISCARDABLE  0, 0, 160, 165
+IDD_CONFIG DIALOG DISCARDABLE  0, 0, 160, 165
 STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW | 0x80000000L
 CAPTION "Config"
@@ -111,22 +111,32 @@ BEGIN
     PUSHBUTTON      "Exceptions...",IDC_EXCEPTIONS,84,120,72,13
 END
 
-IDD_TMANCFG_ABOUT DIALOGEX 0, 0, 160, 165
-STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+IDD_ABOUT DIALOGEX 0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW | 0x80000000L
 CAPTION "About"
 FONT 8, "Tahoma"
 BEGIN
-    ICON            IDI_TMAN,IDC_STATIC,8,8,20,20
-    LTEXT           "tMan",IDC_STATIC,36,8,116,10
-    LTEXT           "Version 0.9.10",IDC_STATIC,36,18,116,10
-    LTEXT           "Copyright (c) 2005 - 2008",IDC_STATIC,36,36,115,10
-    LTEXT           "David Andrš",IDC_STATIC,36,46,115,10
-    RTEXT           "http://pda.jasnapaka.com/tman/",IDC_HOMEPAGE_LINK,4,151,
-                    152,10,SS_NOTIFY
+    ICON            IDI_TMAN,IDC_STATIC,135,5,21,20
+    LTEXT           "tMan 0.9.11",IDC_STATIC,5,8,115,10
+    LTEXT           "Copyright (c) 2005 - 2008",IDC_STATIC,5,23,115,10
+    LTEXT           "David Andrš",IDC_STATIC,5,33,115,10
+    RTEXT           "http://pda.jasnapaka.com/tman/",IDC_HOMEPAGE_LINK,5,124,
+                    151,10,SS_NOTIFY
 END
 
-IDD_TMANCFG_TASKLIST DIALOG DISCARDABLE  0, 0, 160, 165
+IDD_LICENSE DIALOGEX 0, 0, 160, 165
+STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW | 0x80000000L
+CAPTION "License"
+FONT 8, "Tahoma"
+BEGIN
+    EDITTEXT        IDC_LICENSE,5,5,150,129,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER | WS_VSCROLL | WS_HSCROLL | 
+                    NOT WS_TABSTOP
+END
+
+IDD_TASKLIST DIALOG DISCARDABLE  0, 0, 160, 165
 STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW | 0x80000000L
 CAPTION "Task List"
@@ -184,7 +194,7 @@ BEGIN
                     WS_BORDER | WS_TABSTOP,4,34,152,128
 END
 
-IDD_TMANCFG_BUTTONS DIALOG DISCARDABLE  0, 0, 160, 165
+IDD_BUTTONS DIALOG DISCARDABLE  0, 0, 160, 165
 STYLE DS_MODALFRAME | WS_CHILD | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW | 0x80000000L
 CAPTION "Buttons"
@@ -214,7 +224,7 @@ BEGIN
         BOTTOMMARGIN, 33
     END
 
-    IDD_TMANCFG_DIALOG, DIALOG
+    IDD_CONFIG, DIALOG
     BEGIN
         LEFTMARGIN, 4
         RIGHTMARGIN, 157
@@ -224,16 +234,25 @@ BEGIN
         BOTTOMMARGIN, 161
     END
 
-    IDD_TMANCFG_ABOUT, DIALOG
+    IDD_ABOUT, DIALOG
     BEGIN
-        LEFTMARGIN, 4
+        LEFTMARGIN, 5
         RIGHTMARGIN, 156
         VERTGUIDE, 36
-        TOPMARGIN, 4
+        VERTGUIDE, 120
+        TOPMARGIN, 5
         BOTTOMMARGIN, 161
     END
 
-    IDD_TMANCFG_TASKLIST, DIALOG
+    IDD_LICENSE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 155
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 153
+    END
+
+    IDD_TASKLIST, DIALOG
     BEGIN
         LEFTMARGIN, 4
         RIGHTMARGIN, 157
@@ -263,7 +282,7 @@ BEGIN
         LEFTMARGIN, 4
     END
 
-    IDD_TMANCFG_BUTTONS, DIALOG
+    IDD_BUTTONS, DIALOG
     BEGIN
         LEFTMARGIN, 4
         RIGHTMARGIN, 157
@@ -309,6 +328,11 @@ IDR_MAIN MENU DISCARDABLE
 BEGIN
     MENUITEM "Close",                       IDOK
     MENUITEM "About",                       ID_ABOUT
+END
+
+IDR_DONE MENU DISCARDABLE 
+BEGIN
+    MENUITEM "Close",                       IDOK
 END
 
 
@@ -358,6 +382,13 @@ BEGIN
     0, NOMENU,
 END
 
+IDR_DONE SHMENUBAR DISCARDABLE 
+BEGIN
+    IDR_DONE, 1,
+    I_IMAGENONE, IDOK, TBSTATE_ENABLED, TBSTYLE_AUTOSIZE, IDS_CAP_DONE, 0, 
+    NOMENU,
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -375,7 +406,7 @@ IDB_DIRS                BITMAP  DISCARDABLE     "res\\dirs.bmp"
 // Icon with lowest ID value placed first to ensure application icon
 // remains consistent on all systems.
 IDR_MAINFRAME           ICON    DISCARDABLE     "res\\tmancfg.ico"
-IDI_TMAN                ICON    DISCARDABLE     "..\\res\\main.ico"
+IDI_TMAN                ICON    DISCARDABLE     "..\\tman\\res\\main.ico"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -395,8 +426,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,9,10,0
- PRODUCTVERSION 0,9,10,0
+ FILEVERSION 0,9,11,0
+ PRODUCTVERSION 0,9,11,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -414,14 +445,14 @@ BEGIN
             VALUE "Comments", "\0"
             VALUE "CompanyName", "David Andrs\0"
             VALUE "FileDescription", "tMan Config\0"
-            VALUE "FileVersion", "0, 9, 10, 0\0"
+            VALUE "FileVersion", "0, 9, 11, 0\0"
             VALUE "InternalName", "tmancfg\0"
             VALUE "LegalCopyright", "Copyright © 2005 - 2008\0"
             VALUE "LegalTrademarks", "\0"
             VALUE "OriginalFilename", "tmancfg.exe\0"
             VALUE "PrivateBuild", "\0"
             VALUE "ProductName", "tMan Config\0"
-            VALUE "ProductVersion", "0, 9, 10, 0\0"
+            VALUE "ProductVersion", "0, 9, 11, 0\0"
             VALUE "SpecialBuild", "\0"
         END
     END
@@ -483,6 +514,7 @@ BEGIN
     IDS_DESKTOP             "Desktop"
     IDS_WIFI                "Wifi On/Off"
     IDS_BLUETOOTH           "Bluetooth On/Off"
+    IDS_ABOUT               "About"
 END
 
 STRINGTABLE DISCARDABLE 
@@ -491,6 +523,7 @@ BEGIN
     IDS_CAP_ADD             "Add"
     IDS_CAP_CLOSE           "Close"
     IDS_CAP_ABOUT           "About"
+    IDS_CAP_DONE            "Close"
 END
 
 #endif    // English (U.S.) resources

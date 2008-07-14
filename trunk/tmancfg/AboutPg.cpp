@@ -1,5 +1,5 @@
 /**
- *  AboutDlg.cpp
+ *  AboutPg.cpp
  *
  *  Copyright (C) 2008  David Andrs <pda@jasnapaka.com>
  *
@@ -20,7 +20,7 @@
 
 #include "stdafx.h"
 #include "tManCfg.h"
-#include "AboutDlg.h"
+#include "AboutPg.h"
 #include "../share/Config.h"
 
 #ifdef _DEBUG
@@ -30,51 +30,48 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 /////////////////////////////////////////////////////////////////////////////
-// CAboutDlg property page
+// CAboutPg property page
 
-//IMPLEMENT_DYNCREATE(CAboutDlg, CCeDialog)
+IMPLEMENT_DYNCREATE(CAboutPg, CCePropertyPage)
 
-CAboutDlg::CAboutDlg() : CCeDialog(CAboutDlg::IDD)
-{
-	//{{AFX_DATA_INIT(CAboutDlg)
+CAboutPg::CAboutPg() : CCePropertyPage(CAboutPg::IDD) {
+	//{{AFX_DATA_INIT(CAboutPg)
 		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 }
 
-CAboutDlg::~CAboutDlg()
-{
+CAboutPg::~CAboutPg() {
 }
 
-void CAboutDlg::DoDataExchange(CDataExchange* pDX)
-{
-	CCeDialog::DoDataExchange(pDX);
-	//{{AFX_DATA_MAP(CAboutDlg)
+void CAboutPg::DoDataExchange(CDataExchange* pDX) {
+	CCePropertyPage::DoDataExchange(pDX);
+	//{{AFX_DATA_MAP(CAboutPg)
 	DDX_Control(pDX, IDC_HOMEPAGE_LINK, m_ctlHomepageLink);
 	//}}AFX_DATA_MAP
 }
 
 
-BEGIN_MESSAGE_MAP(CAboutDlg, CCeDialog)
-	//{{AFX_MSG_MAP(CAboutDlg)
+BEGIN_MESSAGE_MAP(CAboutPg, CCePropertyPage)
+	//{{AFX_MSG_MAP(CAboutPg)
 	ON_BN_CLICKED(IDC_HOMEPAGE_LINK, OnHomepageLink)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
 /////////////////////////////////////////////////////////////////////////////
-// CAboutDlg message handlers
+// CAboutPg message handlers
 
-void CAboutDlg::OnOK() {
-	CCeDialog::OnOK();
+void CAboutPg::OnOK() {
+	CCePropertyPage::OnOK();
 }
 
-BOOL CAboutDlg::OnInitDialog() {
-	CCeDialog::OnInitDialog();
+BOOL CAboutPg::OnInitDialog() {
+	CCePropertyPage::OnInitDialog();
 	LocalizeDialog(GetSafeHwnd(), IDD);
 
 	return TRUE;
 }
 
-void CAboutDlg::OnHomepageLink() {
+void CAboutPg::OnHomepageLink() {
 	SHELLEXECUTEINFO ei = { 0 };
 	ei.cbSize = sizeof(ei);
 	ei.fMask = SEE_MASK_NOCLOSEPROCESS;

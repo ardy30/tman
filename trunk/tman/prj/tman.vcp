@@ -173,213 +173,27 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\Logger.cpp"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-DEP_CPP_LOGGE=\
-	"..\..\..\devel\pda\tman\Logger.h"\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-NODEP_CPP_LOGGE=\
-	"..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\emulator\vibrate.h"\
-	".\inuserm.h"\
-	".\ipapi.h"\
-	".\ygshell.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-DEP_CPP_LOGGE=\
-	"..\..\..\devel\pda\tman\Logger.h"\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-NODEP_CPP_LOGGE=\
-	"..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\emulator\vibrate.h"\
-	".\inuserm.h"\
-	".\ipapi.h"\
-	".\ygshell.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_LOGGE=\
-	"..\..\..\devel\pda\tman\Logger.h"\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	{$(INCLUDE)}"aygshell.h"\
-	{$(INCLUDE)}"sipapi.h"\
-	{$(INCLUDE)}"winuserm.h"\
-	
-NODEP_CPP_LOGGE=\
-	"..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\ARMV4\vibrate.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_LOGGE=\
-	"..\..\..\devel\pda\tman\Logger.h"\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-NODEP_CPP_LOGGE=\
-	"..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\ARMV4\vibrate.h"\
-	".\inuserm.h"\
-	".\ipapi.h"\
-	".\ygshell.h"\
-	
-
-!ENDIF 
+SOURCE="..\..\share\Logger.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\StdAfx.cpp"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-DEP_CPP_STDAF=\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	
-# ADD CPP /Yc"stdafx.h"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-DEP_CPP_STDAF=\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	
-# ADD CPP /Yc"stdafx.h"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_STDAF=\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	{$(INCLUDE)}"aygshell.h"\
-	{$(INCLUDE)}"sipapi.h"\
-	{$(INCLUDE)}"winuserm.h"\
-	
-NODEP_CPP_STDAF=\
-	"..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\ARMV4\vibrate.h"\
-	
-# ADD CPP /Yc"stdafx.h"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_STDAF=\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	
-# ADD CPP /Yc"stdafx.h"
-
-!ENDIF 
+SOURCE="..\StdAfx.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tman.cpp"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-DEP_CPP_TMAN_=\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-DEP_CPP_TMAN_=\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_TMAN_=\
-	"..\..\..\devel\pda\tman\Logger.h"\
-	"..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	{$(INCLUDE)}"aygshell.h"\
-	{$(INCLUDE)}"bthutil.h"\
-	{$(INCLUDE)}"guiddef.h"\
-	{$(INCLUDE)}"ndispwr.h"\
-	{$(INCLUDE)}"ntddndis.h"\
-	{$(INCLUDE)}"pm.h"\
-	{$(INCLUDE)}"sipapi.h"\
-	{$(INCLUDE)}"winuserm.h"\
-	
-NODEP_CPP_TMAN_=\
-	"..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\ARMV4\vibrate.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_TMAN_=\
-	"..\..\..\devel\pda\tman\StdAfx.h"\
-	
-
-!ENDIF 
+SOURCE="..\tman.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tman.rc"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\tman.rc"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\UIHelper.cpp"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-DEP_CPP_UIHEL=\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-DEP_CPP_UIHEL=\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_UIHEL=\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_UIHEL=\
-	"..\..\..\devel\pda\tman\shguim.h"\
-	"..\..\..\devel\pda\tman\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\..\share\UIHelper.cpp"
 
 # End Source File
 # End Group
@@ -388,27 +202,27 @@ DEP_CPP_UIHEL=\
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\Logger.h"
+SOURCE="..\..\share\Logger.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\newres.h"
+SOURCE="..\newres.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\resource.h"
+SOURCE="..\resource.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\shguim.h"
+SOURCE="..\..\share\shguim.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\StdAfx.h"
+SOURCE="..\StdAfx.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\UIHelper.h"
+SOURCE="..\..\share\UIHelper.h"
 # End Source File
 # End Group
 # Begin Group "Resource Files"
@@ -416,51 +230,51 @@ SOURCE="$(PDA_LOCAL)\tman\UIHelper.h"
 # PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\bth-off.ico"
+SOURCE="..\res\bth-off.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\bth-on.ico"
+SOURCE="..\res\bth-on.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\close.ico"
+SOURCE="..\res\close.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\main.ico"
+SOURCE="..\res\main.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\poweroff.ico"
+SOURCE="..\res\poweroff.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\rotleft.ico"
+SOURCE="..\res\rotleft.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\rotright.ico"
+SOURCE="..\res\rotright.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\screenoff.ico"
+SOURCE="..\res\screenoff.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\swreset.ico"
+SOURCE="..\res\swreset.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\tmancfg.ico"
+SOURCE="..\res\tmancfg.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\wifi_off.ico"
+SOURCE="..\res\wifi_off.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\wifi_on.ico"
+SOURCE="..\res\wifi_on.ico"
 # End Source File
 # End Group
 # Begin Group "shared"
@@ -468,121 +282,34 @@ SOURCE="$(PDA_LOCAL)\tman\res\wifi_on.ico"
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Config.cpp"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-DEP_CPP_CONFI=\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-DEP_CPP_CONFI=\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_CONFI=\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_CONFI=\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ENDIF 
+SOURCE="..\..\share\Config.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Config.h"
+SOURCE="..\..\share\Config.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\defs.h"
+SOURCE="..\..\share\defs.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Localization.cpp"
-DEP_CPP_LOCAL=\
-	"..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\Localization.h"\
-	
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ENDIF 
+SOURCE="..\..\share\Localization.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Localization.h"
+SOURCE="..\..\share\Localization.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\regs.cpp"
-
-!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
-
-DEP_CPP_REGS_=\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
-
-DEP_CPP_REGS_=\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_REGS_=\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_REGS_=\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ENDIF 
-
+SOURCE="..\..\share\regs.cpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\regs.h"
+SOURCE="..\..\share\regs.h"
 # End Source File
 # End Group
-# Begin Source File
-
-SOURCE="$(PDA_LOCAL)\tman\ReadMe.txt"
-# End Source File
 # End Target
 # End Project

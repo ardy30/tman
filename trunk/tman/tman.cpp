@@ -21,11 +21,11 @@
 #include "stdafx.h"
 #include "resource.h"
 
-#include "share/defs.h"
-#include "share/regs.h"
-#include "share/Config.h"
-#include "share/Localization.h"
-#include "Logger.h"
+#include "../share/defs.h"
+#include "../share/regs.h"
+#include "../share/Config.h"
+#include "../share/Localization.h"
+#include "../share/Logger.h"
 
 #include <winioctl.h>
 #include <bthutil.h>
