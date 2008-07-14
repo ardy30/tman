@@ -20,7 +20,7 @@
 
 #include "stdafx.h"
 #include "tManCfg.h"
-#include "uihelper.h"
+#include "..\share\uihelper.h"
 #include "Caption.h"
 
 #ifdef _DEBUG

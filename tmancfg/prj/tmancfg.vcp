@@ -172,781 +172,97 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\AboutDlg.cpp"
-DEP_CPP_ABOUT=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\AboutDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\LinkCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\AboutPg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\browsedlg.cpp"
-DEP_CPP_BROWS=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\browsedlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\BrowseDlg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\Caption.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_CAPTI=\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_CAPTI=\
-	"..\..\..\devel\pda\tman\tmancfg\batticfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_CAPTI=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_CAPTI=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\Caption.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CeDialog.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_CEDIA=\
-	"..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_CEDIA=\
-	"..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_CEDIA=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_CEDIA=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\CeDialog.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CeListCtrl.cpp"
-DEP_CPP_CELIS=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\CeListCtrl.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CePropertyPage.cpp"
-DEP_CPP_CEPRO=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\CePropertyPage.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CePropertySheet.cpp"
-DEP_CPP_CEPROP=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertySheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\CePropertySheet.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\ExceptionAppsDlg.cpp"
-DEP_CPP_EXCEP=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\browsedlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\ExceptionAppsDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\ExceptionAppsDlg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\GrabKeyDlg.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_GRABK=\
-	"..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_GRABK=\
-	"..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_GRABK=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_GRABK=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\GrabKeyDlg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\IgnoreListDlg.cpp"
-DEP_CPP_IGNOR=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\browsedlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\IgnoreListDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\IgnoreListDlg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\LinkCtrl.cpp"
-DEP_CPP_LINKC=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\LinkCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\LinkCtrl.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\StdAfx.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_STDAF=\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_STDAF=\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_STDAF=\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-# ADD CPP /Yc"stdafx.h"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_STDAF=\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\StdAfx.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManButtonsPg.cpp"
-DEP_CPP_TMANB=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManButtonsPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\tManButtonsPg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfg.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_TMANC=\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_TMANC=\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\tmancfg\batticfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\BattiSheet.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_TMANC=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertySheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManButtonsPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_TMANC=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\LinkCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManButtonsPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-NODEP_CPP_TMANC=\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
-	
-
-!ENDIF 
+SOURCE="..\tMancfg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfg.rc"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-!ENDIF 
+SOURCE="..\tMancfg.rc"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfgPg.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_TMANCF=\
-	"..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_TMANCF=\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_TMANCF=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\ExceptionAppsDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_TMANCF=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\ExceptionAppsDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\tMancfgPg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManSheet.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_TMANS=\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_TMANS=\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMnaSheet.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_TMANS=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\AboutDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertySheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\LinkCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManButtonsPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_TMANS=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\LinkCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManButtonsPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfgPg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManSheet.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-NODEP_CPP_TMANS=\
-	"..\..\..\..\devel\pda\tman\tmancfg\tManAboutPg.h"\
-	
-
-!ENDIF 
+SOURCE="..\tManSheet.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tmantasklistpg.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_TMANT=\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_TMANT=\
-	"..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\devel\pda\tman\tmancfg\Config.h"\
-	"..\..\..\devel\pda\tman\tmancfg\GrabKeyDlg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_TMANT=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\IgnoreListDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_TMANT=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\Caption.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeDialog.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CeListCtrl.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\CePropertyPage.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\IgnoreListDlg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tMancfg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\tmantasklistpg.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\tManTaskListPg.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\UIHelper.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_UIHEL=\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_UIHEL=\
-	"..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_UIHEL=\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_UIHEL=\
-	"..\..\..\..\devel\pda\tman\tmancfg\shguim.h"\
-	"..\..\..\..\devel\pda\tman\tmancfg\UIHelper.h"\
-	
-
-!ENDIF 
+SOURCE="..\..\share\UIHelper.cpp"
 
 # End Source File
 # End Group
@@ -955,87 +271,87 @@ DEP_CPP_UIHEL=\
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\AboutDlg.h"
+SOURCE="..\AboutPg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\browsedlg.h"
+SOURCE="..\BrowseDlg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\Caption.h"
+SOURCE="..\Caption.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CeDialog.h"
+SOURCE="..\CeDialog.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CeListCtrl.h"
+SOURCE="..\CeListCtrl.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CePropertyPage.h"
+SOURCE="..\CePropertyPage.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\CePropertySheet.h"
+SOURCE="..\CePropertySheet.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\ExceptionAppsDlg.h"
+SOURCE="..\ExceptionAppsDlg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\GrabKeyDlg.h"
+SOURCE="..\GrabKeyDlg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\IgnoreListDlg.h"
+SOURCE="..\IgnoreListDlg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\LinkCtrl.h"
+SOURCE="..\LinkCtrl.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\newres.h"
+SOURCE="..\newres.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\resource.h"
+SOURCE="..\resource.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\shguim.h"
+SOURCE="..\..\share\shguim.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\StdAfx.h"
+SOURCE="..\StdAfx.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManButtonsPg.h"
+SOURCE="..\tManButtonsPg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfg.h"
+SOURCE="..\tMancfg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tMancfgPg.h"
+SOURCE="..\tMancfgPg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tManSheet.h"
+SOURCE="..\tManSheet.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\tmantasklistpg.h"
+SOURCE="..\tManTaskListPg.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\UIHelper.h"
+SOURCE="..\..\share\UIHelper.h"
 # End Source File
 # End Group
 # Begin Group "Resource Files"
@@ -1043,15 +359,15 @@ SOURCE="$(PDA_LOCAL)\tman\tmancfg\UIHelper.h"
 # PROP Default_Filter "ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\res\main.ico"
+SOURCE="..\res\main.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\res\tmancfg.ico"
+SOURCE="..\res\tmancfg.ico"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\tmancfg\res\tmancfg.rc2"
+SOURCE="..\res\tmancfg.rc2"
 # End Source File
 # End Group
 # Begin Group "share"
@@ -1059,138 +375,39 @@ SOURCE="$(PDA_LOCAL)\tman\tmancfg\res\tmancfg.rc2"
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Config.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_CONFI=\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_CONFI=\
-	"..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_CONFI=\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_CONFI=\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ENDIF 
+SOURCE="..\..\share\Config.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Config.h"
+SOURCE="..\..\share\Config.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\defs.h"
+SOURCE="..\..\share\defs.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\helpers.cpp"
-DEP_CPP_HELPE=\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ENDIF 
+SOURCE="..\..\share\helpers.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\helpers.h"
+SOURCE="..\..\share\helpers.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\Localization.cpp"
-DEP_CPP_LOCAL=\
-	"..\..\..\..\devel\pda\tman\share\arraylt.h"\
-	"..\..\..\..\devel\pda\tman\share\Config.h"\
-	"..\..\..\..\devel\pda\tman\share\Localization.h"\
-	
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ENDIF 
+SOURCE="..\..\share\Localization.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\regs.cpp"
-
-!IF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Release"
-
-NODEP_CPP_REGS_=\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE emulator) Debug"
-
-NODEP_CPP_REGS_=\
-	"..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_REGS_=\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-# SUBTRACT CPP /YX /Yc /Yu
-
-!ELSEIF  "$(CFG)" == "tmancfg - Win32 (WCE ARMV4) Debug"
-
-DEP_CPP_REGS_=\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-
-!ENDIF 
+SOURCE="..\..\share\regs.cpp"
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\regs.h"
+SOURCE="..\..\share\regs.h"
 # End Source File
 # End Group
 # End Target

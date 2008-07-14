@@ -6,7 +6,7 @@
 
 [Version]
 	Signature = "$Windows NT$"
-	Provider = "David Andrš"
+	Provider = "David Andrs"
 	CESignature = "$Windows CE$"
 
 [CEDevice]
@@ -25,10 +25,13 @@
 	RegPath = "Software\DaProfik\tMan"
 
 [SourceDisksNames]
-	1                    = ,,,bin
+	1                    = ,"tMan",,..\tman\prj\ARMV4Rel
+	2                    = ,"tMan Config",,..\tmancfg\prj\ARMV4Rel
+	3                    = ,"Setup",,..\setup\prj\ARMV4Rel
+	4                    = ,"License",,..
 
 [SourceDisksFiles]
-	License.txt = 2
+	COPYING = 4
 
 [DefaultInstall]
 	CEShortcuts  = Shortcuts
@@ -39,6 +42,8 @@
 	Files.Bin.ARM               = ,%InstallDir%
 	Files.Bin.ARM.Localized     = ,%InstallDir%
 
+[Files.License]
+	COPYING,,,0x80000000
 
 ;
 ; ARM
@@ -49,12 +54,12 @@
 
 [SourceDisksFiles.ARM]
 	tMan.exe = 1
-	setup.dll = 1
-	tManCfg.exe = 1
+	tManCfg.exe = 2
+	setup.dll = 3
 
 [DefaultInstall.ARM]
 	CESetupDLL = "setup.dll"
-	CopyFiles  = Files.Bin.ARM
+	CopyFiles  = Files.Bin.ARM,Files.License
 	AddReg     = AddRegSection.ARM
 
 [Files.Bin.ARM]
@@ -71,13 +76,13 @@
 	BuildMax=0xE0000000
 
 [SourceDisksNames.ARM.Localized]
-	3 = ,"Language files",,lang
+	5 = ,"Language files",,..\lang
 
 [SourceDisksFiles.ARM.Localized]
 	tMan.exe = 1
-	setup.dll = 1
-	tManCfg.exe = 1
-	default.lng = 3
+	tManCfg.exe = 2
+	setup.dll = 3
+	default.lng = 5
 
 [DefaultInstall.ARM.Localized]
 	CESetupDLL = "setup.dll"

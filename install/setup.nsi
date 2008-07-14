@@ -4,13 +4,13 @@
 
 ; Define your application name
 !define APPNAME "tMan"
-!define APPNAMEANDVERSION "tMan 0.9.10"
+!define APPNAMEANDVERSION "tMan ${VERSION}"
 
 ; Main Install settings
 Name "${APPNAMEANDVERSION}"
 InstallDir "$PROGRAMFILES\tMan"
 InstallDirRegKey HKLM "Software\${APPNAME}" ""
-OutFile "tMan.exe"
+OutFile "tMan-${VERSION}.exe"
 
 ; do not touch anything beyond this point unless you KNOW what you are doing
 ;

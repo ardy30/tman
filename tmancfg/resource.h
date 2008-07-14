@@ -3,8 +3,12 @@
 // Used by tmancfg.rc
 //
 #define IDD_TMANCFG_DIALOG              102
+#define IDD_CONFIG                      102
 #define IDD_TMANCFG_ABOUT               103
+#define IDD_ABOUT                       103
 #define IDD_TMANCFG_TASKLIST            104
+#define IDD_TASKLIST                    104
+#define IDD_LICENSE                     105
 #define IDR_MAINFRAME                   128
 #define IDR_MAIN                        129
 #define IDI_TMAN                        130
@@ -15,10 +19,12 @@
 #define IDD_BROWSE                      134
 #define IDB_DIRS_HI                     135
 #define IDD_TMANCFG_BUTTONS             135
+#define IDD_BUTTONS                     135
 #define IDB_DIRS                        136
 #define IDR_BROWSE                      137
 #define IDR_REMOVE                      138
 #define IDR_IGNORE_LIST                 139
+#define IDR_DONE                        140
 #define IDS_TMAN                        200
 #define IDS_OPTIONS                     200
 #define IDS_TMAN_CONFIG                 201
@@ -49,6 +55,7 @@
 #define IDS_DESKTOP                     226
 #define IDS_WIFI                        227
 #define IDS_BLUETOOTH                   228
+#define IDS_ABOUT                       229
 #define IDC_HOMEPAGE_LINK               1000
 #define IDC_RUN_ON_STARTUP              1001
 #define IDC_GENERAL_LBL                 1002
@@ -85,6 +92,7 @@
 #define IDC_C_IGNORELIST                1033
 #define IDC_C_ON_TAP                    1034
 #define IDC_C_ONTAPNHOLD                1035
+#define IDC_LICENSE                     1035
 #define IDC_COMPACT_MODE                1036
 #define ID_CANCEL                       32771
 #define IDS_CAP_CANCEL                  32773
@@ -97,14 +105,15 @@
 #define IDS_CAP_CLOSE                   32793
 #define ID_ABOUT                        32794
 #define IDS_CAP_ABOUT                   32796
+#define IDS_CAP_DONE                    32798
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        139
-#define _APS_NEXT_COMMAND_VALUE         32797
-#define _APS_NEXT_CONTROL_VALUE         1035
-#define _APS_NEXT_SYMED_VALUE           104
+#define _APS_NEXT_RESOURCE_VALUE        141
+#define _APS_NEXT_COMMAND_VALUE         32799
+#define _APS_NEXT_CONTROL_VALUE         1036
+#define _APS_NEXT_SYMED_VALUE           105
 #endif
 #endif

@@ -171,85 +171,52 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\setup\setup.cpp"
-
-!IF  "$(CFG)" == "setup - Win32 (WCE emulator) Release"
-
+SOURCE="..\setup.cpp"
 DEP_CPP_SETUP=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-NODEP_CPP_SETUP=\
-	".\e_setup.h"\
-	
-
-!ELSEIF  "$(CFG)" == "setup - Win32 (WCE emulator) Debug"
-
-DEP_CPP_SETUP=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-NODEP_CPP_SETUP=\
-	".\e_setup.h"\
-	
-
-!ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Release"
-
-DEP_CPP_SETUP=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
+	"..\..\share\defs.h"\
+	"..\..\share\helpers.h"\
+	"..\..\share\regs.h"\
+	"..\StdAfx.h"\
 	{$(INCLUDE)}"ce_setup.h"\
 	
 
+!IF  "$(CFG)" == "setup - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "setup - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Release"
+
+# ADD CPP /YX
+
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Debug"
 
-DEP_CPP_SETUP=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-NODEP_CPP_SETUP=\
-	".\e_setup.h"\
-	
+# ADD CPP /YX
 
 !ENDIF 
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\setup\Setup.def"
+SOURCE="..\Setup.def"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\setup\StdAfx.cpp"
+SOURCE="..\StdAfx.cpp"
+DEP_CPP_STDAF=\
+	"..\StdAfx.h"\
+	
 
 !IF  "$(CFG)" == "setup - Win32 (WCE emulator) Release"
 
-DEP_CPP_STDAF=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	
-
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE emulator) Debug"
-
-DEP_CPP_STDAF=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	
 
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Release"
 
-DEP_CPP_STDAF=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	
+# ADD CPP /Yc"stdafx.h"
 
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Debug"
 
-DEP_CPP_STDAF=\
-	"..\..\..\..\devel\pda\tman\setup\StdAfx.h"\
-	
+# ADD CPP /Yc"stdafx.h"
 
 !ENDIF 
 
@@ -260,7 +227,7 @@ DEP_CPP_STDAF=\
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\setup\StdAfx.h"
+SOURCE="..\StdAfx.h"
 # End Source File
 # End Group
 # Begin Group "Resource Files"
@@ -272,87 +239,61 @@ SOURCE="$(PDA_LOCAL)\tman\setup\StdAfx.h"
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\defs.h"
+SOURCE="..\..\share\defs.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\helpers.cpp"
+SOURCE="..\..\share\helpers.cpp"
+DEP_CPP_HELPE=\
+	"..\..\share\defs.h"\
+	"..\..\share\helpers.h"\
+	
 
 !IF  "$(CFG)" == "setup - Win32 (WCE emulator) Release"
 
-DEP_CPP_HELPE=\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	
-
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE emulator) Debug"
-
-DEP_CPP_HELPE=\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	
 
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Release"
 
-DEP_CPP_HELPE=\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	
 # SUBTRACT CPP /YX
 
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Debug"
 
-DEP_CPP_HELPE=\
-	"..\..\..\..\devel\pda\tman\share\defs.h"\
-	"..\..\..\..\devel\pda\tman\share\helpers.h"\
-	
+# SUBTRACT CPP /YX
 
 !ENDIF 
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\helpers.h"
+SOURCE="..\..\share\helpers.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\regs.cpp"
+SOURCE="..\..\share\regs.cpp"
+DEP_CPP_REGS_=\
+	"..\..\share\regs.h"\
+	
 
 !IF  "$(CFG)" == "setup - Win32 (WCE emulator) Release"
 
-DEP_CPP_REGS_=\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
-
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE emulator) Debug"
-
-DEP_CPP_REGS_=\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
 
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Release"
 
-DEP_CPP_REGS_=\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
+# SUBTRACT CPP /YX
 
 !ELSEIF  "$(CFG)" == "setup - Win32 (WCE ARMV4) Debug"
 
-DEP_CPP_REGS_=\
-	"..\..\..\..\devel\pda\tman\share\regs.h"\
-	
+# SUBTRACT CPP /YX
 
 !ENDIF 
 
 # End Source File
 # Begin Source File
 
-SOURCE="$(PDA_LOCAL)\tman\share\regs.h"
+SOURCE="..\..\share\regs.h"
 # End Source File
 # End Group
-# Begin Source File
-
-SOURCE="$(PDA_LOCAL)\tman\setup\ReadMe.txt"
-# End Source File
 # End Target
 # End Project
