@@ -46,21 +46,21 @@ CFG=tman - Win32 (WCE emulator) Debug
 # PROP CPU_ID "{32E52003-403E-442D-BE48-DE10F8C6131D}"
 # PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
 # PROP Target_Dir ""
-LINK32=link.exe
-# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
-# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
-BSC32=bscmake.exe
-# ADD BASE BSC32 /nologo
-# ADD BSC32 /nologo
-MTL=midl.exe
-# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
-# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
-CPP=cl.exe
-# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /Yu"stdafx.h" /Gs8192 /GF /O2 /c
-# ADD CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /Yu"stdafx.h" /Gs8192 /GF /O2 /c
 RSC=rc.exe
 # ADD BASE RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
 # ADD RSC /l 0x409 /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /Yu"stdafx.h" /Gs8192 /GF /O2 /c
+# ADD CPP /nologo /W3 /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "_i386_" /D UNDER_CE=$(CEVersion) /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /Yu"stdafx.h" /Gs8192 /GF /O2 /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
 
 !ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
 
@@ -78,21 +78,21 @@ RSC=rc.exe
 # PROP CPU_ID "{32E52003-403E-442D-BE48-DE10F8C6131D}"
 # PROP Platform_ID "{8A9A2F80-6887-11D3-842E-005004848CBA}"
 # PROP Target_Dir ""
-LINK32=link.exe
-# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
-# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
-BSC32=bscmake.exe
-# ADD BASE BSC32 /nologo
-# ADD BSC32 /nologo
-MTL=midl.exe
-# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
-# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
-CPP=cl.exe
-# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /Yu"stdafx.h" /Gs8192 /GF /c
-# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /Yu"stdafx.h" /Gs8192 /GF /c
 RSC=rc.exe
 # ADD BASE RSC /l 0x409 /d "$(CePlatform)" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "_X86_" /d "x86" /d "_i386_" /r
 # ADD RSC /l 0x409 /d "$(CePlatform)" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "_X86_" /d "x86" /d "_i386_" /r
+CPP=cl.exe
+# ADD BASE CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /Yu"stdafx.h" /Gs8192 /GF /c
+# ADD CPP /nologo /W3 /Zi /Od /D "DEBUG" /D "_i386_" /D UNDER_CE=$(CEVersion) /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "i_386_" /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /Yu"stdafx.h" /Gs8192 /GF /c
+MTL=midl.exe
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
+# ADD LINK32 commctrl.lib coredll.lib $(CEx86Corelibc) /nologo /base:"0x00010000" /stack:0x10000,0x1000 /entry:"WinMainCRTStartup" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /subsystem:$(CESubsystem) /MACHINE:IX86
 
 !ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
 
@@ -173,37 +173,90 @@ LINK32=link.exe
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE="..\..\share\Logger.cpp"
-
-# End Source File
-# Begin Source File
-
 SOURCE="..\StdAfx.cpp"
+DEP_CPP_STDAF=\
+	"..\..\share\shguim.h"\
+	"..\..\share\UIHelper.h"\
+	"..\StdAfx.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	{$(INCLUDE)}"winuserm.h"\
+	
+NODEP_CPP_STDAF=\
+	"..\..\..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\ARMV4\vibrate.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+# ADD CPP /Yc"stdafx.h"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+# ADD CPP /Yc
+
+!ENDIF 
 
 # End Source File
 # Begin Source File
 
 SOURCE="..\tman.cpp"
+DEP_CPP_TMAN_=\
+	"..\..\share\arraylt.h"\
+	"..\..\share\Config.h"\
+	"..\..\share\defs.h"\
+	"..\..\share\Localization.h"\
+	"..\..\share\Logger.h"\
+	"..\..\share\regs.h"\
+	"..\..\share\shguim.h"\
+	"..\..\share\UIHelper.h"\
+	"..\StdAfx.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"bthutil.h"\
+	{$(INCLUDE)}"guiddef.h"\
+	{$(INCLUDE)}"ndispwr.h"\
+	{$(INCLUDE)}"ntddndis.h"\
+	{$(INCLUDE)}"pm.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	{$(INCLUDE)}"winuserm.h"\
+	
+NODEP_CPP_TMAN_=\
+	"..\..\..\..\..\Program Files\Windows CE Tools\wce420\POCKET PC 2003\Include\ARMV4\vibrate.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
 
 # End Source File
 # Begin Source File
 
 SOURCE="..\tman.rc"
 
-# End Source File
-# Begin Source File
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
 
-SOURCE="..\..\share\UIHelper.cpp"
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+!ENDIF 
 
 # End Source File
 # End Group
 # Begin Group "Header Files"
 
 # PROP Default_Filter "h;hpp;hxx;hm;inl"
-# Begin Source File
-
-SOURCE="..\..\share\Logger.h"
-# End Source File
 # Begin Source File
 
 SOURCE="..\newres.h"
@@ -214,15 +267,7 @@ SOURCE="..\resource.h"
 # End Source File
 # Begin Source File
 
-SOURCE="..\..\share\shguim.h"
-# End Source File
-# Begin Source File
-
 SOURCE="..\StdAfx.h"
-# End Source File
-# Begin Source File
-
-SOURCE="..\..\share\UIHelper.h"
 # End Source File
 # End Group
 # Begin Group "Resource Files"
@@ -283,6 +328,25 @@ SOURCE="..\res\wifi_on.ico"
 # Begin Source File
 
 SOURCE="..\..\share\Config.cpp"
+DEP_CPP_CONFI=\
+	"..\..\share\Config.h"\
+	"..\..\share\defs.h"\
+	"..\..\share\regs.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ENDIF 
 
 # End Source File
 # Begin Source File
@@ -296,6 +360,26 @@ SOURCE="..\..\share\defs.h"
 # Begin Source File
 
 SOURCE="..\..\share\Localization.cpp"
+DEP_CPP_LOCAL=\
+	"..\..\share\arraylt.h"\
+	"..\..\share\Config.h"\
+	"..\..\share\defs.h"\
+	"..\..\share\Localization.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ENDIF 
 
 # End Source File
 # Begin Source File
@@ -304,11 +388,86 @@ SOURCE="..\..\share\Localization.h"
 # End Source File
 # Begin Source File
 
+SOURCE="..\..\share\Logger.cpp"
+DEP_CPP_LOGGE=\
+	"..\..\share\Logger.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="..\..\share\Logger.h"
+# End Source File
+# Begin Source File
+
 SOURCE="..\..\share\regs.cpp"
+DEP_CPP_REGS_=\
+	"..\..\share\regs.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ENDIF 
+
 # End Source File
 # Begin Source File
 
 SOURCE="..\..\share\regs.h"
+# End Source File
+# Begin Source File
+
+SOURCE="..\..\share\shguim.h"
+# End Source File
+# Begin Source File
+
+SOURCE="..\..\share\UIHelper.cpp"
+DEP_CPP_UIHEL=\
+	"..\..\share\shguim.h"\
+	"..\..\share\UIHelper.h"\
+	
+
+!IF  "$(CFG)" == "tman - Win32 (WCE emulator) Release"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE emulator) Debug"
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Release"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ELSEIF  "$(CFG)" == "tman - Win32 (WCE ARMV4) Debug"
+
+# SUBTRACT CPP /YX /Yc /Yu
+
+!ENDIF 
+
+# End Source File
+# Begin Source File
+
+SOURCE="..\..\share\UIHelper.h"
 # End Source File
 # End Group
 # End Target
