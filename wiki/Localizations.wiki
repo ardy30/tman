@@ -16,6 +16,6 @@ This mini-guide helps you to localize tMan.
   # Open the file in your favorite editor (for example Notepad).
   # Translate every line (do not change the numbers).
   # Save this file as Unicode text, not UTF-8 (Notepad from Windows 2000 and later has this ability).
-  # Send the translated file to me.
+  # Send the translated file to [http://groups.google.com/group/tman-devel tman-devel] group.
    * It is important to send the file as an *attachment* to avoid mail delivery problems.
    * Also it is useful to fill in the Subject field with something meaningful - good subject is for example *Czech localization for tMan <version>*.
