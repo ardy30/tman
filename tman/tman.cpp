@@ -87,7 +87,7 @@ DWORD PosBefore;
 BOOL InvokedByHotKey = FALSE;
 
 // type of displayed button (Ok/Close/None) on the task bar
-enum BtnStyle { 
+enum BtnStyle {
 	BTN_NONE,
 	BTN_CLOSE,
 	BTN_OK
@@ -160,11 +160,11 @@ int MenuWidth;					// width of the menu (necessary for compact row)
 #define IOCTL_HAL_REBOOT CTL_CODE(FILE_DEVICE_HAL, 15, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 extern "C" __declspec(dllimport) BOOL KernelIoControl(
-	DWORD dwIoControlCode, 
-	LPVOID lpInBuf, 
-	DWORD nInBufSize, 
-	LPVOID lpOutBuf, 
-	DWORD nOutBufSize, 
+	DWORD dwIoControlCode,
+	LPVOID lpInBuf,
+	DWORD nInBufSize,
+	LPVOID lpOutBuf,
+	DWORD nOutBufSize,
 	LPDWORD lpBytesReturned);
 
 // ----------------------------------------------------------------------------
@@ -172,23 +172,23 @@ extern "C" __declspec(dllimport) BOOL KernelIoControl(
 
 // GDI Escapes for ExtEscape()
 #define QUERYESCSUPPORT    8
- 
+
 // The following are unique to CE
 #define GETVFRAMEPHYSICAL			6144
 #define GETVFRAMELEN				6145
 #define DBGDRIVERSTAT				6146
 #define SETPOWERMANAGEMENT			6147
 #define GETPOWERMANAGEMENT			6148
- 
- 
+
+
 typedef enum _VIDEO_POWER_STATE {
     VideoPowerOn = 1,
     VideoPowerStandBy,
     VideoPowerSuspend,
     VideoPowerOff
 } VIDEO_POWER_STATE, *PVIDEO_POWER_STATE;
- 
- 
+
+
 typedef struct _VIDEO_POWER_MANAGEMENT {
     ULONG Length;
     ULONG DPMSVersion;
@@ -214,7 +214,7 @@ int GetPlatform() {
 		switch (OSVI.dwMajorVersion) {
 			case 3: platformID = PLATFORM_WM2002; break;
 			case 4: platformID = PLATFORM_WM2003; break;
-			case 5: 
+			case 5:
 				if (OSVI.dwMinorVersion < 2) platformID = PLATFORM_WM5;
 				else if (OSVI.dwMinorVersion == 2) platformID = PLATFORM_WM6;
 				else platformID = PLATFORM_WM6;
@@ -237,7 +237,7 @@ COLORREF hsl2rgb(double h, double sl, double l) {
 
 	r = l;   // default to gray
 	g = l;
-	b = l; 
+	b = l;
 	v = (l <= 0.5) ? (l * (1.0 + sl)) : (l + sl - l * sl);
 
 	if (v > 0) {
@@ -249,41 +249,41 @@ COLORREF hsl2rgb(double h, double sl, double l) {
 		m = l + l - v;
 		sv = (v - m ) / v;
 		h *= 6.0;
-		sextant = ((int) h); 
+		sextant = ((int) h);
 		fract = h - sextant;
 		vsf = v * sv * fract;
 		mid1 = m + vsf;
 		mid2 = v - vsf;
 		switch (sextant) {
-			case 0: 
-				r = v; 
-				g = mid1; 
-				b = m; 
+			case 0:
+				r = v;
+				g = mid1;
+				b = m;
 				break;
-			case 1: 
-				r = mid2; 
-				g = v; 
-				b = m; 
+			case 1:
+				r = mid2;
+				g = v;
+				b = m;
 				break;
-			case 2: 
-				r = m; 
-				g = v; 
-				b = mid1; 
+			case 2:
+				r = m;
+				g = v;
+				b = mid1;
 				break;
-			case 3: 
-				r = m; 
-				g = mid2; 
-				b = v; 
+			case 3:
+				r = m;
+				g = mid2;
+				b = v;
 				break;
-			case 4: 
-				r = mid1; 
-				g = m; 
-				b = v; 
+			case 4:
+				r = mid1;
+				g = m;
+				b = v;
 				break;
-			case 5: 
-				r = v; 
-				g = m; 
-				b = mid2; 
+			case 5:
+				r = v;
+				g = m;
+				b = mid2;
 				break;
 		}
 	}
@@ -315,7 +315,7 @@ void rgb2hsl(COLORREF rgb, double &h, double &s, double &l) {
 	s = vm;
 	if (s > 0.0) {
 		s /= (l <= 0.5) ? (v + m ) : (2.0 - v - m);
-	} 
+	}
 	else {
 		return;
 	}
@@ -397,7 +397,7 @@ void LoadThemeColors() {
 			// no theme use some system colors
 			ClrBg = GetSysColor(COLOR_HIGHLIGHT);
 			ClrFg = GetSysColor(COLOR_HIGHLIGHTTEXT);
-		}	
+		}
 
 //			ClrBg2 = RGB(0X00, 0X11, 0X29);
 //		RegQueryValueEx(hColor, _T("25"), NULL, &dwType, (LPBYTE) &(shColors[25]), &sizeBg);
@@ -494,7 +494,7 @@ void DisplayOff() {
 
 	gdc = ::GetDC(NULL);
 	if (ExtEscape(gdc, QUERYESCSUPPORT, sizeof(int), (LPCSTR) &iESC, 0, NULL) == 0) {
-		// display off feature not 
+		// display off feature not
 	}
 	else {
 		VIDEO_POWER_MANAGEMENT vpm;
@@ -666,7 +666,7 @@ void SetBluetoothState(BOOL enable) {
 			HWND hWndMenu = FindWindow(_T("MNU"), _T(""));
 			// enter menu loop
 			SendMessage(hBtWnd, WM_ENTERMENULOOP, 0x01, 0x00);
-			// 
+			//
 //			SendMessage(hBtWnd, WM_COMMAND, enable ? CMD_BT_OFF : CMD_BT_ON, 0x00);
 			SendMessage(hBtWnd, WM_COMMAND, enable ? CMD_BT_ON : CMD_BT_OFF, 0x00);
 			// end menu loop
@@ -757,7 +757,7 @@ BOOL AddTaskToCloseList(HWND hWnd) {
 			}
 		}
 	}
-	
+
 	BOOL ret = FALSE;
 	if (!found && firstFreeIdx != -1) {
 		TasksToClose[firstFreeIdx] = hWnd;
@@ -798,7 +798,7 @@ BOOL InsertMenuTask(HMENU hMenu, int taskCount, LPCTSTR name, DWORD processID, H
 			if (wcsicmp(lpFileName, Config.IgnoredApps[i]) == 0) {
 				ignore = TRUE;
 				break;
-			}			
+			}
 		}
 
 		if (!ignore) {
@@ -884,7 +884,7 @@ BOOL IsNotificationBubble(HWND hWnd) {
 		return TRUE;
 	else
 		return FALSE;
-		
+
 }
 
 
@@ -905,7 +905,7 @@ HWND GetUnderlyingWindow(HWND hWnd) {
 
 		if (::IsWindow(hNext) && ::IsWindowVisible(hNext) && IsTaskWindow(hNext))
 			return hNext;
-		
+
 		hNext = ::GetWindow(hNext, GW_HWNDNEXT);
 	}
 
@@ -1507,7 +1507,7 @@ void ShowTaskMenu() {
 		DWORD pos = ::GetMessagePos();
 
 		RECT rc;
-		GetWindowRect(HMain, &rc);
+		GetWindowRect(HTaskBar, &rc);
 
 		POINT ptMouse;
 		ptMouse.x = LOWORD(pos);
@@ -1573,7 +1573,7 @@ int GetCloseButtonType(HWND hWnd) {
 		else
 			return BTN_CLOSE;								// draw closing 'x'
 	}
-	else 
+	else
 		return BTN_NONE;
 }
 
@@ -1602,7 +1602,7 @@ void DoAction(ActionType actionType, HWND hWnd) {
 				tapAction = ex->TapAction;
 				gestureAction = ex->GestureAction;
 				break;
-			}			
+			}
 		}
 	}
 
@@ -1702,8 +1702,6 @@ void OnMeasureItem(UINT idCtl, LPMEASUREITEMSTRUCT lpmis) {
 
 	if (lpmis->itemWidth < (UINT) SCALEX(160))
 		lpmis->itemWidth = SCALEX(160);
-
-	MenuWidth = lpmis->itemWidth + SCALEX(8);		// minor correction
 }
 
 void OnDrawItem(UINT idCtl, LPDRAWITEMSTRUCT lpdis) {
@@ -1729,6 +1727,8 @@ void OnDrawItem(UINT idCtl, LPDRAWITEMSTRUCT lpdis) {
 	HBRUSH brBkgnd = CreateSolidBrush(clrBg);
 	HGDIOBJ hOrigBrush = SelectObject(hDC, brBkgnd);
 //	SelectObject(hDC, brBkgnd);
+
+	MenuWidth = rcItem.right - rcItem.left;
 
 	HPEN penBkgnd = CreatePen(PS_NULL, 0, clrBg);
 	HGDIOBJ hOrigPen = SelectObject(hDC, penBkgnd);
@@ -1910,7 +1910,7 @@ void DrawX(HDC hDC, RECT rc, COLORREF clr) {
 	// draw 'x'
 	HPEN penK = CreatePen(PS_SOLID, 1, clr);
 	HGDIOBJ hOrigPenK = SelectObject(hDC, penK);
-	
+
 	Line(hDC, rc.left, rc.top, rc.right + 1, rc.bottom + 1);
 	Line(hDC, rc.right, rc.top, rc.left - 1, rc.bottom + 1);
 
@@ -2006,7 +2006,7 @@ void DrawButtonWM2003(int type, HDC hDC, RECT rc, BOOL bLoDPI) {
 	COLORREF clrFont;
 	if (OKPressed)
 		clrFont = ClrFg;
-	else 
+	else
 		clrFont = ClrBg;
 
 	if (type == BTN_OK) {
@@ -2073,7 +2073,7 @@ void DrawBkgndWM5(HDC hDC, RECT rc) {
 }
 
 void DrawButtonWM5(int type, HDC hDC, RECT rc, BOOL bLoDPI) {
-	// draw close/ok button	
+	// draw close/ok button
 	if (bLoDPI) {
 		if (Config.ShowDot)
 			rc.right = rc.right - SCALEX(3);
@@ -2112,7 +2112,7 @@ void DrawButtonWM5(int type, HDC hDC, RECT rc, BOOL bLoDPI) {
 		int b = b1 + ((i / 2) * (b2-b1) / wd);
 		COLORREF rgb = RGB(r, g, b);
 
-	
+
 		HPEN pen = CreatePen(PS_SOLID, 1, rgb);
 		HGDIOBJ oldPenStep = SelectObject(hDC, pen);
 
@@ -2139,7 +2139,7 @@ void DrawButtonWM5(int type, HDC hDC, RECT rc, BOOL bLoDPI) {
 			rc.left++;
 			rc.right++;
 		}
-	
+
 		DrawOK(hDC, rc, clrFont);
 	}
 	else if (type == BTN_CLOSE) {
@@ -2236,7 +2236,7 @@ void DrawBkgndWM6(HDC hDC, RECT rc) {
 			int ra = r + (k * (r2-r) / (w));
 			int ga = g + (k * (g2-g) / (w));
 			int ba = b + (k * (b2-b) / (w));
-			
+
 			COLORREF a = RGB(ra, ga, ba);
 			SetPixel(hDC, rc.left + k, rc.bottom - i, a);
 		}
@@ -2244,7 +2244,7 @@ void DrawBkgndWM6(HDC hDC, RECT rc) {
 }
 
 void DrawButtonWM6(int type, HDC hDC, RECT rc, BOOL bLoDPI) {
-	// draw close/ok button	
+	// draw close/ok button
 	if (bLoDPI) {
 		if (Config.ShowDot)
 			rc.right = rc.right - SCALEX(1);
@@ -2272,7 +2272,7 @@ void DrawButtonWM6(int type, HDC hDC, RECT rc, BOOL bLoDPI) {
 
 	if (Config.OldStyleBkgnd) {
 //		clrBtnFrame1 = ::GetSysColor(COLOR_WINDOWFRAME);
-		
+
 		clrBtnBg = clrBtnFrame2 = ::GetSysColor(COLOR_HIGHLIGHT);
 		double h, s, l;
 		rgb2hsl(clrBtnFrame2, h, s, l);
@@ -2407,7 +2407,7 @@ void OnPaint(HWND hWnd) {
 	DeleteObject(pen);
 
 	// Ok/Close button
-	int type = GetCloseButtonType(GetForegroundWindow());	
+	int type = GetCloseButtonType(GetForegroundWindow());
 	if (type != BTN_NONE) {
 		if (Config.OldStyleButton)
 			DrawButtonWM2003(type, MemDC, rcBtn, bLoDPI);
@@ -2481,7 +2481,7 @@ LRESULT OnMouseMove(HWND hWnd, WORD xPos, WORD yPos, WORD fwKeys) {
 	rc.left = rc.right - SCALEX(TMAN_WND_WD);
 
 	if (!BTaskButt &&
-		xPos > rc.left + SCALEX(TMAN_DOT_SIZE) && xPos <= rc.right) 
+		xPos > rc.left + SCALEX(TMAN_DOT_SIZE) && xPos <= rc.right)
 	{
 	}
 	else {
@@ -2614,7 +2614,7 @@ void OnTimer(UINT eventID) {
 					rcMain.top != rcTaskbar.top + SCALEY(TMAN_WND_TOP))
 				{
 					SetWindowPos(HMain, NULL,
-						rcTaskbar.right - SCALEX(TMAN_WND_WD), rcTaskbar.top + SCALEY(TMAN_WND_TOP), 
+						rcTaskbar.right - SCALEX(TMAN_WND_WD), rcTaskbar.top + SCALEY(TMAN_WND_TOP),
 						SCALEX(TMAN_WND_WD), rcTaskbar.bottom - rcTaskbar.top - (2 * SCALEX(TMAN_WND_TOP)),
 						SWP_NOZORDER);
 					InvalidateRect(HMain, NULL, FALSE);
@@ -2645,8 +2645,8 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 	LOG3(3, "OnHotKey(%d, %d, %d)", hWnd, wParam, lParam);
 
 	int idHotKey = (int) wParam;
-	UINT fuModifiers = (UINT) LOWORD(lParam); 
-	UINT uVirtKey = (UINT) HIWORD(lParam); 
+	UINT fuModifiers = (UINT) LOWORD(lParam);
+	UINT uVirtKey = (UINT) HIWORD(lParam);
 
 	if (TaskMenuOpened) {
 		ReleaseCapture();
@@ -2672,7 +2672,7 @@ void OnCommand(UINT nID) {
 		first = ID_PROGRAM_FIRST + 1;
 	else
 		first = ID_PROGRAM_FIRST;
-	
+
 	if (nID >= first && nID <= ID_PROGRAM_LAST) {
 		int taskIdx = nID - ID_PROGRAM_FIRST;
 
@@ -2751,7 +2751,7 @@ LRESULT CALLBACK MainWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) 
 			case WM_MEASUREITEM:
 				OnMeasureItem((UINT) wParam, (LPMEASUREITEMSTRUCT) lParam);
 				return TRUE;
-				
+
 			case WM_DRAWITEM:
 				OnDrawItem((UINT) wParam, (LPDRAWITEMSTRUCT) lParam);
 				return TRUE;
@@ -2834,7 +2834,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLin
 	ScreenOrientation = GetScreenOrientation();
 
 	HMain = CreateWindow(WINDOW_CLASS, WINDOW_NAME, WS_CHILD | WS_VISIBLE,
-		rcTaskbar.right - SCALEX(TMAN_WND_WD), rcTaskbar.top + SCALEY(TMAN_WND_TOP), 
+		rcTaskbar.right - SCALEX(TMAN_WND_WD), rcTaskbar.top + SCALEY(TMAN_WND_TOP),
 		SCALEX(TMAN_WND_WD), rcTaskbar.bottom - rcTaskbar.top - (2 * SCALEY(TMAN_WND_TOP)),
 		HTaskBar, NULL, hInstance, NULL);
 	SetWindowPos(HMain, HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
