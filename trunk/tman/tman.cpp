@@ -83,6 +83,7 @@ BOOL CloseTask = FALSE;
 BOOL TaskMenuOpened = FALSE;
 BOOL ClosingTaskMenu = FALSE;
 int HotKeyID = 0;
+BOOL HKClosingTaskMenu = FALSE;
 
 UINT ReadConfigMessage;
 
@@ -1591,11 +1592,11 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 	if (TaskMenuOpened) {
 		if ((fuModifiers & 0x1000) == 0) {
 			ReleaseCapture();
-			SendMessage(HMain, WM_CANCELMODE, 0, 0);
-
 			// close Opened Task Menu
-			TaskMenuOpened = FALSE;
+			SendMessage(HMain, WM_CANCELMODE, 0, 0);
 			BTaskButt = FALSE;
+			TaskMenuOpened = FALSE;
+			HKClosingTaskMenu = TRUE;
 		}
 	}
 	else {
@@ -1615,21 +1616,27 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 			}
 			else {
 				// key up
-				if (!AltTabOpen) {
-					KillTimer(HMain, LongPressTimer);
-					BuildTaskList();
-					if (TaskCount > 1) {
-						// open alt tab window
-						AltTabOpen = TRUE;
-						AltTabPrgIdx = 1;
+				if (HKClosingTaskMenu) {
+					// filtering out the release of the hot-key
+					HKClosingTaskMenu = FALSE;
+				}
+				else {
+					if (!AltTabOpen) {
+						KillTimer(HMain, LongPressTimer);
+						BuildTaskList();
+						if (TaskCount > 1) {
+							// open alt tab window
+							AltTabOpen = TRUE;
+							AltTabPrgIdx = 1;
 
+							// start Alt+Tab timer
+							SetTimer(HMain, AltTabTimer, 350, NULL);
+						}
+					}
+					else {
 						// start Alt+Tab timer
 						SetTimer(HMain, AltTabTimer, 350, NULL);
 					}
-				}
-				else {
-					// start Alt+Tab timer
-					SetTimer(HMain, AltTabTimer, 350, NULL);
 				}
 			}
 		}
