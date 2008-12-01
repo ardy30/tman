@@ -18,10 +18,10 @@
  *
  */
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "tManCfg.h"
 #include "LicensePg.h"
-#include "..\share\Config.h"
+#include "../share/Config.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 #include "CePropertyPage.h"
 #include "../share/Localization.h"
 

@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 #include "CeListCtrl.h"
 
 #ifdef _DEBUG

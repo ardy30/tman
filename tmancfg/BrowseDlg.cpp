@@ -1,9 +1,9 @@
 // browsedlg.cpp : implementation file
 //
 
-#include "stdafx.h"
-#include "tmancfg.h"
-#include "browsedlg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
+#include "BrowseDlg.h"
 #include "../share/helpers.h"
 
 #ifdef _DEBUG
@@ -58,7 +58,7 @@ BOOL SysError(int resID, DWORD err, BOOL quiet, ...) {
 //
 // For sorting files and dirs (dirs go before files)
 //
-static int CALLBACK 
+static int CALLBACK
 DirFileCompareProc(LPARAM lParam1, LPARAM lParam2, LPARAM lParamSort) {
 	CTreeCtrl *pTreeCtrl = (CTreeCtrl *) lParamSort;
 	HTREEITEM hItem1 = (HTREEITEM) lParam1;
@@ -161,7 +161,7 @@ BOOL CBrowseDlg::OnInitDialog() {
 	mbi.hwndParent = GetSafeHwnd();
 
 	fSuccess = SHCreateMenuBar(&mbi);
-	m_hwndCmdBar = mbi.hwndMB;	
+	m_hwndCmdBar = mbi.hwndMB;
 
 	LocalizeMenubar(m_hwndCmdBar);
 
@@ -322,7 +322,7 @@ void CBrowseDlg::FillMe() {
 
 void CBrowseDlg::OnSelchangedDirs(NMHDR* pNMHDR, LRESULT* pResult) {
 	NM_TREEVIEW* pNMTreeView = (NM_TREEVIEW*)pNMHDR;
-	
+
 	// set path
 	m_ctlPath.SetWindowText(GetFullPath(pNMTreeView->itemNew.hItem));
 
@@ -410,7 +410,7 @@ void CBrowseDlg::OnCancel() {
 		m_ctlDirs.SendMessage(TVM_ENDEDITLABELNOW, TRUE);
 		return;
 	}
-	
+
 	CCeDialog::OnCancel();
 }
 
@@ -436,7 +436,7 @@ void CBrowseDlg::OnNewFolder() {
 
 void CBrowseDlg::OnEndlabeleditDirs(NMHDR* pNMHDR, LRESULT* pResult) {
 	TV_DISPINFO* pTVDispInfo = (TV_DISPINFO*)pNMHDR;
-	
+
 	if (pTVDispInfo->item.pszText != NULL &&
 		lstrlen(pTVDispInfo->item.pszText) > 0) {
 
@@ -468,7 +468,7 @@ CString CBrowseDlg::GetFullPath(HTREEITEM hItem) {
 	while (hParent != m_hRootItem) {
 		path = _T("\\") + m_ctlDirs.GetItemText(hParent) + path;
 		hParent = m_ctlDirs.GetParentItem(hParent);
-	} 
+	}
 
 	if (path.GetLength() == 0)
 		path = _T("\\");

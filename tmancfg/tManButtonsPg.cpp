@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 #include "tManButtonsPg.h"
 #include "GrabKeyDlg.h"
 
@@ -63,6 +63,7 @@ CtManButtonsPg::CtManButtonsPg() : CCePropertyPage(CtManButtonsPg::IDD) {
 		// NOTE: the ClassWizard will add member initialization here
 	//}}AFX_DATA_INIT
 	HwKey = Config.TaskListHWKey;
+	m_bAltTab = Config.AltTab;
 }
 
 CtManButtonsPg::~CtManButtonsPg() {
@@ -75,6 +76,7 @@ void CtManButtonsPg::DoDataExchange(CDataExchange* pDX) {
 	DDX_Control(pDX, IDC_GRAB, m_ctlGrab);
 	DDX_Control(pDX, IDC_CLEAR, m_ctlClear);
 	DDX_Control(pDX, IDC_TASKLIST_LBL, m_ctlTaskListLbl);
+	DDX_Check(pDX, IDC_ALT_TAB, m_bAltTab);
 	//}}AFX_DATA_MAP
 }
 
@@ -96,7 +98,7 @@ BOOL CtManButtonsPg::OnInitDialog() {
 	m_ctlHWKey.SetKey(HwKey);
 
 	m_ctlGrab.SetFocus();
-	
+
 	return TRUE;
 }
 
@@ -121,16 +123,17 @@ void CtManButtonsPg::OnClear() {
 void CtManButtonsPg::OnOK() {
 	if (UpdateData()) {
 		Config.TaskListHWKey = HwKey;
+		Config.AltTab = m_bAltTab;
 
 		// change tMan's hot key
 		RegisterTMansHotKey(Config.TaskListHWKey);
 	}
-	
+
 	CCePropertyPage::OnOK();
 }
 
 BOOL CtManButtonsPg::OnSetActive() {
 	Config.Page = 2;
-	
+
 	return CCePropertyPage::OnSetActive();
 }

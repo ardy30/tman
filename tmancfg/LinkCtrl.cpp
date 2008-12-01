@@ -18,7 +18,7 @@
  *
  */
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "tManCfg.h"
 #include "LinkCtrl.h"
 
@@ -71,7 +71,7 @@ void CLinkCtrl::OnClicked() {
 
 void CLinkCtrl::OnPaint() {
 	CPaintDC dc(this); // device context for painting
-	
+
 	CRect rc;
 	GetClientRect(&rc);
 
@@ -95,7 +95,7 @@ void CLinkCtrl::OnPaint() {
 	CString sText;
 	GetWindowText(sText);
 	dc.DrawText(sText, rc, fmt);
-	
+
 	dc.RestoreDC(saveDC);
 
 	// Do not call CStatic::OnPaint() for painting messages

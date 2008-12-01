@@ -58,7 +58,7 @@ public:
 protected:
 	//{{AFX_MSG(CListCtrlNoDots)
 	afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
-	afx_msg void OnRecognizeGesture(NMHDR *pNMHDR, LRESULT *pResult); 
+	afx_msg void OnRecognizeGesture(NMHDR *pNMHDR, LRESULT *pResult);
 	//}}AFX_MSG
 
 	DECLARE_MESSAGE_MAP()
@@ -78,7 +78,7 @@ public:
 
 // Dialog Data
 	//{{AFX_DATA(CtManTaskListPg)
-	enum { IDD = IDD_TMANCFG_TASKLIST };
+	enum { IDD = IDD_TASKLIST };
 	CListCtrlNoDots	m_ctlTaskListItems;
 	CCaption	m_ctlItemsLbl;
 	BOOL	m_bCompactModel;

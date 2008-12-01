@@ -18,7 +18,7 @@
  *
  */
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "tManCfg.h"
 #include "tManSheet.h"
 #include "../share/Config.h"
@@ -66,13 +66,13 @@ void CtManSheet::Init() {
 
 BOOL CtManSheet::OnInitDialog() {
 	CCePropertySheet::OnInitDialog();
-	
+
 	SHINITDLGINFO sid;
 	sid.dwMask   = SHIDIM_FLAGS;
 	sid.dwFlags  = SHIDIF_SIZEDLGFULLSCREEN;
 	sid.hDlg     = GetSafeHwnd();
 	SHInitDialog(&sid);
-	
+
 	BOOL fSuccess;
 	SHMENUBARINFO mbi = { 0 };
 
@@ -94,11 +94,11 @@ BOOL CtManSheet::OnInitDialog() {
 void CtManSheet::OnAbout() {
 	CAboutPg pgAbout;
 	CLicensePg pgLicense;
-	
+
 	CCePropertySheet sheet(IDS_ABOUT);
 	sheet.AddPage(&pgAbout);
 	sheet.AddPage(&pgLicense);
-	
+
 	sheet.SetMenu(IDR_DONE);
 	sheet.DoModal();
 }

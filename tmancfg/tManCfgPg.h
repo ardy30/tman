@@ -40,7 +40,7 @@ public:
 
 // Dialog Data
 	//{{AFX_DATA(CtManCfgPg)
-	enum { IDD = IDD_TMANCFG_DIALOG };
+	enum { IDD = IDD_CONFIG };
 	CComboBox	m_ctlTapAndHoldAction;
 	CComboBox	m_ctlTapAction;
 	CComboBox	m_ctlGestureAction;

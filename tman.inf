@@ -1,0 +1,96 @@
+;
+; This is an installation file
+;
+; by David Andrs, 2005 - 2008
+;
+
+[Version]
+	Signature = "$Windows NT$"
+	Provider = "David Andrs"
+	CESignature = "$Windows CE$"
+
+[CEDevice]
+	UnsupportedPlatforms = "HPC","HPC Pro"
+	VersionMin           = 3.0
+	VersionMax           = 10000.0
+
+[CEStrings]
+	AppName = "tMan"
+	InstallDir = "%CE1%\%AppName%"
+
+[Shortcuts]
+	%AppName%,0,tMan.exe
+
+[Strings]
+	RegPath = "Software\DaProfik\tMan"
+
+[SourceDisksNames]
+	1                    = ,"tMan",,tman\build
+	2                    = ,"tMan Config",,tmancfg\build
+	3                    = ,"Setup",,setup\build
+	4                    = ,"License",,
+
+[SourceDisksFiles]
+	COPYING = 4
+
+[DefaultInstall]
+	CEShortcuts  = Shortcuts
+
+[DestinationDirs]
+	Shortcuts                   = ,%CE11%
+	Files.License               = ,%InstallDir%
+	Files.Bin.ARM               = ,%InstallDir%
+	Files.Bin.ARM.Localized     = ,%InstallDir%
+
+[Files.License]
+	COPYING,,,0x80000000
+
+;
+; ARM
+;
+[CEDevice.ARM]
+	ProcessorType = 2577
+	BuildMax=0xE0000000
+
+[SourceDisksFiles.ARM]
+	tMan.exe = 1
+	tManCfg.exe = 2
+	setup.dll = 3
+
+[DefaultInstall.ARM]
+	CESetupDLL = "setup.dll"
+	CopyFiles  = Files.Bin.ARM,Files.License
+	AddReg     = AddRegSection.ARM
+
+[Files.Bin.ARM]
+	tMan.exe,,,0x80000000
+	tManCfg.exe,,,0x80000000
+
+[AddRegSection.ARM]
+
+;
+; ARM - localized version
+;
+[CEDevice.ARM.Localized]
+	ProcessorType = 2577
+	BuildMax=0xE0000000
+
+[SourceDisksNames.ARM.Localized]
+	5 = ,"Language files",,..\lang
+
+[SourceDisksFiles.ARM.Localized]
+	tMan.exe = 1
+	tManCfg.exe = 2
+	setup.dll = 3
+	default.lng = 5
+
+[DefaultInstall.ARM.Localized]
+	CESetupDLL = "setup.dll"
+	CopyFiles  = Files.Bin.ARM,Files.Bin.ARM.Localized
+	AddReg     = AddRegSection.ARM.Localized
+
+[Files.Bin.ARM.Localized]
+	default.lng,,,0x80000000
+
+[AddRegSection.ARM.Localized]
+

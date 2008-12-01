@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 #include "GrabKeyDlg.h"
 
 #ifdef _DEBUG
@@ -68,7 +68,7 @@ typedef
 BOOL CGrabKeyDlg::OnInitDialog() {
 	CDialog::OnInitDialog();
 	LocalizeDialog(GetSafeHwnd(), IDD);
-	
+
 	// register all HW buttons
 	HINSTANCE hCoreDll;
 	UnregisterFunc1Proc procUnregisterFunc;
@@ -81,14 +81,14 @@ BOOL CGrabKeyDlg::OnInitDialog() {
 		RegisterHotKey(GetSafeHwnd(), i, MOD_WIN, i);
 	}
 	FreeLibrary(hCoreDll);
-	
+
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
 }
 
 LRESULT CGrabKeyDlg::OnHotKey(WPARAM wParam, LPARAM lParam) {
-	int idHotKey = (int) wParam; 
-	UINT fuModifiers = (UINT) LOWORD(lParam); 
+	int idHotKey = (int) wParam;
+	UINT fuModifiers = (UINT) LOWORD(lParam);
 	UINT uVirtKey = (UINT) HIWORD(lParam);
 
 	VKey = uVirtKey;
@@ -102,5 +102,5 @@ void CGrabKeyDlg::OnDestroy() {
 		UnregisterHotKey(GetSafeHwnd(), i);
 	}
 
-	CDialog::OnDestroy();	
+	CDialog::OnDestroy();
 }
