@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "ce_setup.h"
+#include "StdAfx.h"
+#include <ce_setup.h>
 #include "../share/defs.h"
 #include "../share/regs.h"
 #include "../share/helpers.h"

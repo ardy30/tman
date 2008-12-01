@@ -30,6 +30,7 @@ LPCTSTR szGestureAction = _T("GestureAction");
 LPCTSTR szPage = _T("Page");
 
 LPCTSTR szTaskListHWKey = _T("TLHWKey");
+LPCTSTR szAltTab = _T("AltTab");
 LPCTSTR szCompactMode = _T("CompactMode");
 LPCTSTR szShowDesktop = _T("ShowDesktop");
 LPCTSTR szShowSoftReset = _T("ShowSoftReset");
@@ -125,6 +126,7 @@ CConfig::CConfig() {
 	GestureAction = BUTTON_ACTION_MINIMIZE;
 
 	TaskListHWKey = 0;
+	AltTab = CONFIG_DEFAULT_ALT_TAB;
 	CompactMode = CONFIG_DEFAULT_COMPACT_MODE;
 	ShowDesktop = CONFIG_DEFAULT_SHOW_DESKTOP;
 	ShowSoftReset = CONFIG_DEFAULT_SHOW_SOFT_RESET;
@@ -158,7 +160,7 @@ CConfig::CConfig() {
 
 	Exceptions = NULL;
 	ExceptionsCount = 0;
-	
+
 	WiFiDevice = CONFIG_DEFAULT_WIFI_DEVICE_NAME;
 
 #ifdef LOGGING
@@ -212,6 +214,7 @@ void CConfig::Save() {
 
 		// task list
 		RegWriteDword(hApp, szTaskListHWKey, TaskListHWKey);
+		RegWriteDword(hApp, szAltTab, AltTab);
 		RegWriteDword(hApp, szCompactMode, CompactMode);
 		RegWriteDword(hApp, szShowDesktop, ShowDesktop);
 		RegWriteDword(hApp, szShowSoftReset, ShowSoftReset);
@@ -292,6 +295,7 @@ void CConfig::Load() {
 
 		// task list
 		TaskListHWKey = RegReadDword(hApp, szTaskListHWKey, 0);
+		AltTab = RegReadDword(hApp, szAltTab, CONFIG_DEFAULT_ALT_TAB);
 		CompactMode = RegReadDword(hApp, szCompactMode, CONFIG_DEFAULT_COMPACT_MODE);
 		ShowDesktop = RegReadDword(hApp, szShowDesktop, CONFIG_DEFAULT_SHOW_DESKTOP);
 		ShowSoftReset = RegReadDword(hApp, szShowSoftReset, CONFIG_DEFAULT_SHOW_SOFT_RESET);
@@ -348,7 +352,7 @@ void CConfig::Load() {
 			for (int i = 0; i < (int) cValues; i++) {
 				TCHAR strItem[64] = { 0 };
 				swprintf(strItem, szItem, i);
-				
+
 				TCHAR *strApp = RegReadString(hIgnoreList, strItem, _T(""));
 				if (wcslen(strApp) > 0)
 					IgnoredApps[i] = strApp;

@@ -40,6 +40,8 @@
 #define CONFIG_DEFAULT_SHOW_WIFI				FALSE
 #define CONFIG_DEFAULT_SHOW_BTH					FALSE
 
+#define CONFIG_DEFAULT_ALT_TAB					TRUE
+
 #define CONFIG_DEFAULT_COLOR_MENU_HI_BG			GetSysColor(COLOR_HIGHLIGHT)
 #define CONFIG_DEFAULT_COLOR_MENU_HI_FG			GetSysColor(COLOR_HIGHLIGHTTEXT)
 #define CONFIG_DEFAULT_COLOR_MENU_BG			GetSysColor(COLOR_MENU)
@@ -86,6 +88,7 @@ public:
 	int TapAction;
 	int TapAndHoldAction;
 	int GestureAction;
+	BOOL AltTab;
 
 	//
 	TCHAR **IgnoredApps;		// do not show these apps in task list

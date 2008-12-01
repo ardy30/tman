@@ -18,9 +18,9 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
-#include "tmantasklistpg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
+#include "tManTaskListPg.h"
 #include "IgnoreListDlg.h"
 
 #include "../share/Config.h"
@@ -121,7 +121,7 @@ END_MESSAGE_MAP()
 BOOL CtManTaskListPg::OnInitDialog() {
 	CCePropertyPage::OnInitDialog();
 	LocalizeDialog(GetSafeHwnd(), IDD);
-	
+
 	m_ctlTaskListItems.SetExtendedStyle(LVS_EX_CHECKBOXES);
 
 	CRect rcTaskListItems;
@@ -165,7 +165,7 @@ void CtManTaskListPg::OnOK() {
 
 BOOL CtManTaskListPg::OnSetActive() {
 	Config.Page = 1;
-	
+
 	return CCePropertyPage::OnSetActive();
 }
 

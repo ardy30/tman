@@ -2,11 +2,8 @@
 // Microsoft eMbedded Visual C++ generated include file.
 // Used by tmancfg.rc
 //
-#define IDD_TMANCFG_DIALOG              102
 #define IDD_CONFIG                      102
-#define IDD_TMANCFG_ABOUT               103
 #define IDD_ABOUT                       103
-#define IDD_TMANCFG_TASKLIST            104
 #define IDD_TASKLIST                    104
 #define IDD_LICENSE                     105
 #define IDR_MAINFRAME                   128
@@ -18,7 +15,6 @@
 #define IDD_EXCEPTIONS                  133
 #define IDD_BROWSE                      134
 #define IDB_DIRS_HI                     135
-#define IDD_TMANCFG_BUTTONS             135
 #define IDD_BUTTONS                     135
 #define IDB_DIRS                        136
 #define IDR_BROWSE                      137
@@ -94,6 +90,7 @@
 #define IDC_C_ONTAPNHOLD                1035
 #define IDC_LICENSE                     1035
 #define IDC_COMPACT_MODE                1036
+#define IDC_ALT_TAB                     1037
 #define ID_CANCEL                       32771
 #define IDS_CAP_CANCEL                  32773
 #define IDS_CAP_NEWFOLDER               32783
@@ -108,7 +105,7 @@
 #define IDS_CAP_DONE                    32798
 
 // Next default values for new objects
-// 
+//
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        141

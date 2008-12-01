@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 #include "ExceptionAppsDlg.h"
 #include "BrowseDlg.h"
 #include "../share/defs.h"
@@ -237,7 +237,7 @@ void CExceptionAppsDlg::OnSelendokTapAction() {
 			int action = m_ctlTapAction.GetItemData(nCurSel);
 			ex->TapAction = action;
 		}
-	}	
+	}
 }
 
 void CExceptionAppsDlg::OnSelendokGestureAction() {
@@ -249,7 +249,7 @@ void CExceptionAppsDlg::OnSelendokGestureAction() {
 			int action = m_ctlGestureAction.GetItemData(nCurSel);
 			ex->GestureAction = action;
 		}
-	}	
+	}
 }
 
 void CExceptionAppsDlg::OnContextMenu(NMHDR *pNMHDR, LRESULT *pResult) {
@@ -270,7 +270,7 @@ void CExceptionAppsDlg::OnRemove() {
 	if (nSelItem != -1) {
 		CConfig::CAppException *ex = (CConfig::CAppException *) m_ctlPrograms.GetItemData(nSelItem);
 		delete ex;
-		
+
 		m_ctlPrograms.DeleteItem(nSelItem);
 	}
 }

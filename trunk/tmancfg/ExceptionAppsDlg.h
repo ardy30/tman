@@ -25,7 +25,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-#include "..\share\Config.h"
+#include "../share/Config.h"
 #include "CeListCtrl.h"
 #include "CeDialog.h"
 

@@ -18,7 +18,7 @@
  *
  */
 
-#include "afx.h"
+#include <afx.h>
 #include "Logger.h"
 
 #ifdef _DEBUG

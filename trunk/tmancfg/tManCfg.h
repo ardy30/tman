@@ -55,7 +55,7 @@ public:
 	DECLARE_MESSAGE_MAP()
 };
 
-#include "..\share\Localization.h"
+#include "../share/Localization.h"
 
 class CLocalizedString : public CString {
 public:

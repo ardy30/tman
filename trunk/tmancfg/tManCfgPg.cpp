@@ -18,7 +18,7 @@
  *
  */
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "tManCfg.h"
 #include "tManCfgPg.h"
 #include "../share/Config.h"
@@ -84,7 +84,7 @@ BOOL CtManCfgPg::OnInitDialog() {
 
 //	SetIcon(m_hIcon, TRUE);			// Set big icon
 //	SetIcon(m_hIcon, FALSE);		// Set small icon
-	
+
 	CenterWindow(GetDesktopWindow());	// center to the hpc screen
 
 //	m_ctlSecondsSpin.SendMessage(CCM_SETVERSION, COMCTL32_VERSION, 0);
@@ -130,7 +130,7 @@ void CtManCfgPg::OnOK() {
 
 BOOL CtManCfgPg::OnSetActive() {
 	Config.Page = 0;
-	
+
 	return CCePropertyPage::OnSetActive();
 }
 

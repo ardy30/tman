@@ -18,7 +18,7 @@
  *
  */
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "tManCfg.h"
 #include "tManSheet.h"
 #include "../share/Config.h"
@@ -85,7 +85,7 @@ BOOL CtManCfgApp::InitInstance()
 					SendMessage(hChild, ReadConfigMessage, 0, 0);
 					break;
 				}
-				
+
 				hChild = GetWindow(hChild, GW_HWNDNEXT);
 			}
 		}

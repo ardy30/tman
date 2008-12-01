@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 
 #include "CePropertySheet.h"
 
@@ -132,7 +132,7 @@ void CCePropertySheet::HookCallback()
 //		Initialize the dialog.
 //		Create the empty command bar.
 //
-BOOL CCePropertySheet::OnInitDialog() 
+BOOL CCePropertySheet::OnInitDialog()
 {
 	BOOL bResult = CPropertySheet::OnInitDialog();
 

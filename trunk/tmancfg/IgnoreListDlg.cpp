@@ -18,8 +18,8 @@
  *
  */
 
-#include "stdafx.h"
-#include "tmancfg.h"
+#include "StdAfx.h"
+#include "tManCfg.h"
 #include "IgnoreListDlg.h"
 #include "BrowseDlg.h"
 #include "../share/Config.h"
@@ -132,7 +132,7 @@ void CIgnoreListDlg::OnOK() {
 	Config.IgnoredApps = new TCHAR *[nItemCount];
 	for (i = 0; i < nItemCount; i++) {
 		CString sApp = m_ctlAppList.GetItemText(i, 0);
-		
+
 		Config.IgnoredApps[i] = new TCHAR [sApp.GetLength() + 1];
 		swprintf(Config.IgnoredApps[i], _T("%s"), sApp);
 	}

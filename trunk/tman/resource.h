@@ -52,9 +52,10 @@
 #define IDS_BLUETOOTH_ON                40020
 #define IDS_BLUETOOTH_OFF               40021
 #define ID_COMPACT_ROW                  40022
+#define ID_DESKTOP                      40023
 
 // Next default values for new objects
-// 
+//
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        114

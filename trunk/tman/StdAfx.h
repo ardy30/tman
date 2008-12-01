@@ -19,8 +19,8 @@
 #include <shellapi.h>
 
 // Local Header Files
-#include "..\share\shguim.h"
-#include "..\share\uihelper.h"
+#include "../share/shguim.h"
+#include "../share/UIHelper.h"
 
 // TODO: reference additional headers your program requires here
 

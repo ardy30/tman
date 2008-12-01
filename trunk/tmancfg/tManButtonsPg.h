@@ -55,11 +55,12 @@ public:
 
 // Dialog Data
 	//{{AFX_DATA(CtManButtonsPg)
-	enum { IDD = IDD_TMANCFG_BUTTONS };
+	enum { IDD = IDD_BUTTONS };
 	CHwKeyEdit	m_ctlHWKey;
 	CButton	m_ctlGrab;
 	CButton	m_ctlClear;
 	CCaption	m_ctlTaskListLbl;
+	BOOL	m_bAltTab;
 	//}}AFX_DATA
 	int HwKey;
 

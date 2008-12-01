@@ -18,9 +18,8 @@
  *
  */
 
-#include "stdafx.h"
+#include "StdAfx.h"
 #include "tManCfg.h"
-#include "..\share\uihelper.h"
 #include "Caption.h"
 
 #ifdef _DEBUG
@@ -46,7 +45,7 @@ CCaption::CCaption() {
 }
 
 CCaption::~CCaption() {
-	m_fntBold.DeleteObject();	
+	m_fntBold.DeleteObject();
 }
 
 
@@ -94,11 +93,11 @@ void CCaption::OnPaint() {
 	int nHalf = (rcClient.bottom + rcClient.top) / SCALEY(2);
 	dc.MoveTo(rcClient.left, rcClient.bottom - SCALEY(2));
 	dc.LineTo(rcClient.right, rcClient.bottom - SCALEY(2));
-	
+
 	dc.SelectObject(oldPen);
 */
-	ValidateRect(NULL);	
-	
+	ValidateRect(NULL);
+
 	// Do not call CStatic::OnPaint() for painting messages
 }
 

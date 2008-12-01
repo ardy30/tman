@@ -42,7 +42,7 @@ public:
 
 // Dialog Data
 	//{{AFX_DATA(CAboutPg)
-	enum { IDD = IDD_TMANCFG_ABOUT };
+	enum { IDD = IDD_ABOUT };
 	CLinkCtrl	m_ctlHomepageLink;
 	//}}AFX_DATA
 
