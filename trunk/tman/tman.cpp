@@ -62,6 +62,9 @@ UINT RedrawTimer = 3;
 UINT LongPressTimer = 4;
 UINT AltTabTimer = 5;
 
+#define ATLTAB_TIMEOUT					350
+
+
 int BtnType;
 
 POINT LastCursorPos;			// last position of "cursor"
@@ -1605,7 +1608,7 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 			if ((fuModifiers & 0x1000) == 0) {
 				// key down
 				if (!AltTabOpen) {
-					SetTimer(HMain, LongPressTimer, 500, NULL);
+					SetTimer(HMain, LongPressTimer, Config.LongPressTimeout, NULL);
 				}
 				else {
 					KillTimer(HMain, AltTabTimer);
@@ -1630,12 +1633,12 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 							AltTabPrgIdx = 1;
 
 							// start Alt+Tab timer
-							SetTimer(HMain, AltTabTimer, 350, NULL);
+							SetTimer(HMain, AltTabTimer, ATLTAB_TIMEOUT, NULL);
 						}
 					}
 					else {
 						// start Alt+Tab timer
-						SetTimer(HMain, AltTabTimer, 350, NULL);
+						SetTimer(HMain, AltTabTimer, ATLTAB_TIMEOUT, NULL);
 					}
 				}
 			}
