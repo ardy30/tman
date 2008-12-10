@@ -55,6 +55,7 @@
 #define CONFIG_DEFAULT_SHOW_DOT					TRUE
 #define CONFIG_DEFAULT_OLD_STYLE_BKGND			FALSE
 #define CONFIG_DEFAULT_LONGPRESS_TIMEOUT		500
+#define CONFIG_DEFAULT_ALTTAB_TIMEOUT			500
 
 #define CONFIG_DEFAULT_WIFI_DEVICE_NAME			_T("")
 
@@ -129,6 +130,7 @@ public:
 	BOOL ShowDot;
 	BOOL OldStyleBkgnd;
 	int LongPressTimeout;
+	int AltTabTimeout;
 
 	// other
 	int Page;

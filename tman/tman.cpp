@@ -23,6 +23,7 @@
 #include "visual.h"
 #include "hw.h"
 #include "colors.h"
+#include "taskwnd.h"
 
 #include "../share/defs.h"
 #include "../share/regs.h"
@@ -32,9 +33,9 @@
 
 
 HINSTANCE HInstance = 0;
-HWND HTaskBar = 0;
-HWND HMain = 0;
-HWND DesktopHWND = 0;
+HWND HTaskBar = 0;				// handle to the task bar (OS)
+HWND HMain = 0;					// handle to the main tMan window
+HWND DesktopHWND = 0;			// handle to the desktop window
 
 HANDLE CloseThread;
 
@@ -60,10 +61,6 @@ UINT MinimizeTimer = 1;
 UINT TapAndHoldTimer = 2;
 UINT RedrawTimer = 3;
 UINT LongPressTimer = 4;
-UINT AltTabTimer = 5;
-
-#define ATLTAB_TIMEOUT					350
-
 
 int BtnType;
 
@@ -98,32 +95,6 @@ HWND TasksToClose[MAX_TASKS_TO_CLOSE] = { 0 };
 CRITICAL_SECTION CSTasksToClose;
 //
 
-// alt tab
-BOOL AltTabOpen = FALSE;
-BOOL AltTabPrgIdx = 0;
-
-class CProgramItem {
-public:
-	TCHAR *Name;
-	DWORD ProcessId;
-	HWND HWnd;
-	HWND HParent;
-	HICON HIcon;
-
-	CProgramItem(LPCTSTR name, DWORD processId, HWND hwnd, HICON hIcon = NULL) {
-		Name = new TCHAR [wcslen(name) + 1];
-		wcscpy(Name, name);
-		ProcessId = processId;
-		HWnd = hwnd;
-		HIcon = hIcon;
-	}
-
-	virtual ~CProgramItem() {
-		delete [] Name;
-	}
-};
-
-#define MAX_TASK_COUNT						128
 CProgramItem *TaskList[MAX_TASK_COUNT] = { 0 };
 int TaskCount = 0;
 
@@ -1018,6 +989,60 @@ void OnSoftReset() {
 	}
 }
 
+//
+
+void GetProcessPathFileName(CProgramItem *pi, LPTSTR pathFileName) {
+	HANDLE hProcess = OpenProcess(0, FALSE, pi->ProcessId);
+	if (hProcess != NULL) {
+		HWND hParent = GetTopParent(pi->HWnd);
+		TCHAR className[64];
+		GetClassName(hParent, className, 64);
+		if (wcscmp(className, _T("Calendar")) == 0) {
+			wcscpy(pathFileName, _T("\\windows\\calendar.lnk"));
+		}
+		else if (wcscmp(className, _T("Tasks Application")) == 0) {
+			wcscpy(pathFileName, _T("\\windows\\tasks.lnk"));
+		}
+		else if (wcscmp(className, _T("Contacts")) == 0 ||
+			wcscmp(className, _T("MSContactsUI")) == 0)			// WM5
+		{
+			wcscpy(pathFileName, _T("\\windows\\addrbook.lnk"));
+		}
+		else {
+			GetModuleFileName((HMODULE) hProcess, pathFileName, MAX_PATH);
+			// find application
+			if (wcsicmp(pathFileName, _T("\\windows\\shfind.exe")) == 0) {
+				if (GetPlatform() == PLATFORM_WM5 || GetPlatform() == PLATFORM_WM6)
+					wcscpy(pathFileName, _T("\\windows\\search.lnk"));
+				else
+					wcscpy(pathFileName, _T("\\windows\\find.lnk"));
+			}
+			// pictures & images
+			else if (wcsicmp(pathFileName, _T("\\windows\\pimg.exe")) == 0) {
+				if (GetPlatform() == PLATFORM_WM6)
+					wcscpy(pathFileName, _T("\\windows\\pimg.lnk"));
+			}
+			// internet sharing
+			else if (wcsicmp(pathFileName, _T("\\windows\\intshrui.exe")) == 0) {
+				if (GetPlatform() == PLATFORM_WM6)
+					wcscpy(pathFileName, _T("\\windows\\intshrui.lnk"));
+			}
+			// Phone
+			else if (wcsicmp(pathFileName, _T("\\windows\\cprog.exe")) == 0) {
+				if (GetPlatform() == PLATFORM_WM5 || GetPlatform() == PLATFORM_WM6)
+					wcscpy(pathFileName, _T("\\windows\\cprog.lnk"));
+			}
+			// modem link
+			else if (wcsicmp(pathFileName, _T("\\windows\\atciui.exe")) == 0) {
+				if (GetPlatform() == PLATFORM_WM5 || GetPlatform() == PLATFORM_WM6)
+					wcscpy(pathFileName, _T("\\windows\\atciui.lnk"));
+			}
+		}
+
+		CloseHandle(hProcess);
+	}
+}
+
 // ----------------------------------------------------------------------------
 // window message handlers
 
@@ -1174,67 +1199,18 @@ void OnDrawItem(UINT idCtl, LPDRAWITEMSTRUCT lpdis) {
 			}
 			else {
 				// icon for progs
-				HANDLE hProcess = OpenProcess(0, FALSE, pi->ProcessId);
-				if (hProcess != NULL) {
-					TCHAR pathFileName[MAX_PATH];
+				TCHAR pathFileName[MAX_PATH];
+				GetProcessPathFileName(pi, pathFileName);
+				SHFILEINFO sfi = { 0 };
+				DWORD imageList;
+				imageList = SHGetFileInfo(pathFileName, 0, &sfi, sizeof(sfi), SHGFI_ICON | SHGFI_SYSICONINDEX | SHGFI_SMALLICON);
 
-					HWND hParent = GetTopParent(pi->HWnd);
-					TCHAR className[64];
-					GetClassName(hParent, className, 64);
-					if (wcscmp(className, _T("Calendar")) == 0) {
-						wcscpy(pathFileName, _T("\\windows\\calendar.lnk"));
-					}
-					else if (wcscmp(className, _T("Tasks Application")) == 0) {
-						wcscpy(pathFileName, _T("\\windows\\tasks.lnk"));
-					}
-					else if (wcscmp(className, _T("Contacts")) == 0 ||
-						wcscmp(className, _T("MSContactsUI")) == 0)			// WM5
-					{
-						wcscpy(pathFileName, _T("\\windows\\addrbook.lnk"));
-					}
-					else {
-						GetModuleFileName((HMODULE) hProcess, pathFileName, MAX_PATH);
-						// find application
-						if (wcsicmp(pathFileName, _T("\\windows\\shfind.exe")) == 0) {
-							if (GetPlatform() == PLATFORM_WM5 || GetPlatform() == PLATFORM_WM6)
-								wcscpy(pathFileName, _T("\\windows\\search.lnk"));
-							else
-								wcscpy(pathFileName, _T("\\windows\\find.lnk"));
-						}
-						// pictures & images
-						else if (wcsicmp(pathFileName, _T("\\windows\\pimg.exe")) == 0) {
-							if (GetPlatform() == PLATFORM_WM6)
-								wcscpy(pathFileName, _T("\\windows\\pimg.lnk"));
-						}
-						// internet sharing
-						else if (wcsicmp(pathFileName, _T("\\windows\\intshrui.exe")) == 0) {
-							if (GetPlatform() == PLATFORM_WM6)
-								wcscpy(pathFileName, _T("\\windows\\intshrui.lnk"));
-						}
-						// Phone
-						else if (wcsicmp(pathFileName, _T("\\windows\\cprog.exe")) == 0) {
-							if (GetPlatform() == PLATFORM_WM5 || GetPlatform() == PLATFORM_WM6)
-								wcscpy(pathFileName, _T("\\windows\\cprog.lnk"));
-						}
-						// modem link
-						else if (wcsicmp(pathFileName, _T("\\windows\\atciui.exe")) == 0) {
-							if (GetPlatform() == PLATFORM_WM5 || GetPlatform() == PLATFORM_WM6)
-								wcscpy(pathFileName, _T("\\windows\\atciui.lnk"));
-						}
-					}
-
-					SHFILEINFO sfi = { 0 };
-					DWORD imageList;
-					imageList = SHGetFileInfo(pathFileName, 0, &sfi, sizeof(sfi), SHGFI_ICON | SHGFI_SYSICONINDEX | SHGFI_SMALLICON);
-
-					if (imageList != 0) {
-						ImageList_DrawEx((HIMAGELIST) imageList, sfi.iIcon, hDC,
-							rcItem.left + SCALEX(2), rcItem.top + SCALEY(1), SCALEX(16), SCALEY(16), CLR_NONE, CLR_NONE, ILD_NORMAL);
-					}
-
-					CloseHandle(hProcess);
+				if (imageList != 0) {
+					ImageList_DrawEx((HIMAGELIST) imageList, sfi.iIcon, hDC,
+						rcItem.left + SCALEX(2), rcItem.top + SCALEY(1), SCALEX(16), SCALEY(16), CLR_NONE, CLR_NONE, ILD_NORMAL);
 				}
 			}
+
 
 			// font
 			HGDIOBJ hOrigFont = SelectObject(hDC, HBoldFont);
@@ -1462,6 +1438,32 @@ LRESULT OnLButtonUp(HWND hWnd, WORD xPos, WORD yPos, WORD fwKeys) {
 		{
 			// show tasks
 			OnShowTaskMenu();
+/*			//
+			BuildTaskList();
+			if (TaskCount > 1) {
+				int wd = GetSystemMetrics(SM_CXSCREEN);
+				int ht = GetSystemMetrics(SM_CYSCREEN);
+				int x = SCALEX(20);
+				wd -= 2 * x;
+				int y = SCALEX(40);
+				ht -= 2 * y;
+
+				ht = 5 * SCALEY(20);
+				if (TaskCount * SCALEY(20) < ht) {
+					ht = TaskCount * SCALEY(20);
+				}
+
+				if (HTaskWnd == NULL) {
+					HTaskWnd = CreateWindowEx(WS_EX_DLGMODALFRAME, TASKWND_CLASS, TASKWND_WINDOW, WS_BORDER | WS_POPUP | WS_VISIBLE,
+							x, y, wd, ht, HMain, NULL, HInstance, NULL);
+					SetWindowPos(HTaskWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+					ShowWindow(HTaskWnd, SW_SHOW);
+					UpdateWindow(HTaskWnd);
+				}
+				else
+					SetForegroundWindow(HTaskWnd);
+			}
+*/
 			return 0;
 		}
 	}
@@ -1553,19 +1555,6 @@ void OnTimer(UINT eventID) {
 		KillTimer(HMain, LongPressTimer);
 		OnShowTaskMenu();
 	}
-	else if (eventID == AltTabTimer) {
-		// activate task
-		KillTimer(HMain, AltTabTimer);
-
-		if (AltTabPrgIdx >= 0 && AltTabPrgIdx < TaskCount && TaskList[AltTabPrgIdx] != NULL) {
-			CProgramItem *pi = TaskList[AltTabPrgIdx];
-			SetForegroundWindow(pi->HWnd); // switch to process
-
-			// switch the processes in the task list
-		}
-
-		AltTabOpen = FALSE;
-	}
 }
 
 void OnReadConfig() {
@@ -1607,14 +1596,8 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 			WORD flags = LOWORD(lParam);
 			if ((fuModifiers & 0x1000) == 0) {
 				// key down
-				if (!AltTabOpen) {
+				if (HTaskWnd == NULL) {
 					SetTimer(HMain, LongPressTimer, Config.LongPressTimeout, NULL);
-				}
-				else {
-					KillTimer(HMain, AltTabTimer);
-
-					AltTabPrgIdx++;
-					if (AltTabPrgIdx >= TaskCount) AltTabPrgIdx = 0;
 				}
 			}
 			else {
@@ -1624,21 +1607,31 @@ LRESULT OnHotKey(HWND hWnd, WPARAM wParam, LPARAM lParam) {
 					HKClosingTaskMenu = FALSE;
 				}
 				else {
-					if (!AltTabOpen) {
+					if (HTaskWnd == NULL) {
+						// open task window
 						KillTimer(HMain, LongPressTimer);
 						BuildTaskList();
 						if (TaskCount > 1) {
-							// open alt tab window
-							AltTabOpen = TRUE;
-							AltTabPrgIdx = 1;
+							int wd = GetSystemMetrics(SM_CXSCREEN);
+							int ht = GetSystemMetrics(SM_CYSCREEN);
+							int x = SCALEX(20);
+							wd -= 2 * x;
+							int y = SCALEX(40);
+							ht -= 2 * y;
 
-							// start Alt+Tab timer
-							SetTimer(HMain, AltTabTimer, ATLTAB_TIMEOUT, NULL);
+							ht = MAX_TASKS * SCALEY(20);
+							if (TaskCount * SCALEY(20) < ht) ht = TaskCount * SCALEY(20);
+
+							if (HTaskWnd == NULL) {
+								HTaskWnd = CreateWindowEx(WS_EX_DLGMODALFRAME, TASKWND_CLASS, TASKWND_WINDOW, WS_BORDER | WS_POPUP | WS_VISIBLE,
+										x, y, wd, ht, HMain, NULL, HInstance, NULL);
+								SetWindowPos(HTaskWnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+								ShowWindow(HTaskWnd, SW_SHOW);
+								UpdateWindow(HTaskWnd);
+							}
+							else
+								SetForegroundWindow(HTaskWnd);
 						}
-					}
-					else {
-						// start Alt+Tab timer
-						SetTimer(HMain, AltTabTimer, ATLTAB_TIMEOUT, NULL);
 					}
 				}
 			}
