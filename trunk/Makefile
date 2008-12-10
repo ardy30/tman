@@ -3,7 +3,7 @@
 #
 
 product=tMan
-version=0.9.10
+version=0.9.11
 
 #CABWIZ=wine z:\\opt\\wince-arm\\wce400\\tools\\cabwiz.exe
 #CABWIZ=wine /home/daprofik/.wine/drive_c/Program\ Files/Windows\ CE\ Tools/wce420/POCKET\ PC\ 2003/Tools/Cabwiz.exe
