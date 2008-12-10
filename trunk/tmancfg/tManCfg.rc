@@ -205,7 +205,7 @@ BEGIN
                     WS_TABSTOP
     PUSHBUTTON      "Grab",IDC_GRAB,80,16,36,12
     PUSHBUTTON      "Clear",IDC_CLEAR,120,16,36,12
-    CONTROL         "Enable Alt+tab feature (press shortly to switch application, long press for task list)",
+    CONTROL         "Enable Alt+Tab (press shortly to switch applications, long press for task list)",
 	                IDC_ALT_TAB,"Button",BS_TOP | BS_MULTILINE | BS_AUTOCHECKBOX | WS_TABSTOP,8,32,148,20
 END
 
