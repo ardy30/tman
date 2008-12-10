@@ -56,6 +56,7 @@ LPCTSTR szKillTimeout = _T("KillTimeout");
 LPCTSTR szOldStyleButton = _T("OldStyleButton");
 LPCTSTR szShowDot = _T("ShowDot");
 LPCTSTR szOldStyleBkgnd = _T("OldStyleBkgnd");
+LPCTSTR szLongPressTimeout = _T("LongPressTimeout");
 
 // Exception List
 LPCTSTR szExceptions = _T("Exceptions");
@@ -145,6 +146,7 @@ CConfig::CConfig() {
 	KillTimeout = CONFIG_DEFAULT_KILL_TIMEOUT;
 	ShowDot = CONFIG_DEFAULT_SHOW_DOT;
 	OldStyleBkgnd = CONFIG_DEFAULT_OLD_STYLE_BKGND;
+	LongPressTimeout = CONFIG_DEFAULT_LONGPRESS_TIMEOUT;
 
 	InstallDir = NULL;
 
@@ -379,6 +381,7 @@ void CConfig::Load() {
 		KillTimeout = RegReadDword(hApp, szKillTimeout, CONFIG_DEFAULT_KILL_TIMEOUT);
 		ShowDot = RegReadDword(hApp, szShowDot, CONFIG_DEFAULT_SHOW_DOT);
 		OldStyleBkgnd = RegReadDword(hApp, szOldStyleBkgnd, CONFIG_DEFAULT_OLD_STYLE_BKGND);
+		LongPressTimeout = RegReadDword(hApp, szLongPressTimeout, CONFIG_DEFAULT_LONGPRESS_TIMEOUT);
 
 #ifdef LOGGING
 		LogFileName = RegReadString(hApp, szLogFile, CONFIG_DEFAULT_LOG_FILE_NAME);
